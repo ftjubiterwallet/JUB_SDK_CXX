@@ -68,8 +68,8 @@
 		672313A122D30A12005BEFCC /* cashaddr.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cashaddr.cc; path = ../../../../../deps/bitcoinABC/cashaddr.cc; sourceTree = "<group>"; };
 		672313A222D30A12005BEFCC /* cashaddr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cashaddr.h; path = ../../../../../deps/bitcoinABC/cashaddr.h; sourceTree = "<group>"; };
 		672313A522D30BCA005BEFCC /* byteswap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = byteswap.h; path = ../../../../../deps/bitcoin/compat/byteswap.h; sourceTree = "<group>"; };
-		672313A622D30C65005BEFCC /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = endian.h; path = ../../../../../deps/bitcoin/compat/endian.h; sourceTree = "<group>"; };
 		672313A822D3406D005BEFCC /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		672452C422E08E58000CC64D /* portable_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = portable_endian.h; path = ../../../../../deps/panzi/portable_endian.h; sourceTree = "<group>"; };
 		672C95F922DF40BA0073AB0D /* JUB_SDK_BTC.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JUB_SDK_BTC.cpp; sourceTree = "<group>"; };
 		672C95FC22DF41050073AB0D /* JUB_SDK_BTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUB_SDK_BTC.h; sourceTree = "<group>"; };
 		672C960222DF42F80073AB0D /* JUB_SDK_ETH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUB_SDK_ETH.h; sourceTree = "<group>"; };
@@ -197,10 +197,17 @@
 		672313A422D30BB3005BEFCC /* compat */ = {
 			isa = PBXGroup;
 			children = (
-				672313A622D30C65005BEFCC /* endian.h */,
 				672313A522D30BCA005BEFCC /* byteswap.h */,
 			);
 			name = compat;
+			sourceTree = "<group>";
+		};
+		672452C322E08E4A000CC64D /* panzi */ = {
+			isa = PBXGroup;
+			children = (
+				672452C422E08E58000CC64D /* portable_endian.h */,
+			);
+			name = panzi;
 			sourceTree = "<group>";
 		};
 		6737F3A222CF57C10019DF07 /* libbitcoin */ = {
@@ -320,10 +327,11 @@
 				67C4B58E22CE18F400F85860 /* bigint */,
 				6723139822D30829005BEFCC /* bitcoin */,
 				672313A022D309FC005BEFCC /* bitcoinABC */,
+				EADCCDB422A7C1FC008F2EF5 /* ble */,
 				6737F3A222CF57C10019DF07 /* libbitcoin */,
 				67B9563922DC75C800E90AF9 /* mSIGNA */,
+				672452C322E08E4A000CC64D /* panzi */,
 				EADCCDB922A7C25D008F2EF5 /* polarssl */,
-				EADCCDB422A7C1FC008F2EF5 /* ble */,
 			);
 			name = deps;
 			path = JubSDK/deps;
