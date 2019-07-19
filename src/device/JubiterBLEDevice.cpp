@@ -286,7 +286,7 @@ void JubiterBLEDevice::ExtraSetting() {
 #if defined(__APPLE__)
 #include <TargetConditionals.h>
 #if TARGET_OS_IOS // ios
-    FT_BLESetIsReConnected(false);
+    FT_BLE__SetIsReConnected(false);
     // cmd: 00A40400
     uchar_vector cmd("00A40400");
     unsigned char resp[0x100] = {0,};
@@ -327,7 +327,7 @@ void JubiterBLEDevice::ExtraSetting() {
         return;
     }
 
-    FT_BLESetIsReConnected(true);
+    FT_BLE__SetIsReConnected(true);
 #endif // #if TARGET_OS_IOS
 #endif // #if defined(__APPLE__)
 }
