@@ -89,6 +89,15 @@ NS_ASSUME_NONNULL_BEGIN
                           tokenTo:(NSString*)tokenTo
                        tokenValue:(NSString*)tokenValue;
 
+//JUB_RV JUB_SetERC20ETHToken(IN JUB_UINT16 contextID,
+//                            IN JUB_CHAR_PTR tokenName,
+//                            IN JUB_UINT16 unitDP,
+//                            IN JUB_CHAR_PTR contractAddress);
+- (void)JUB_SetERC20ETHToken:(NSUInteger)contextID
+                   tokenName:(NSString*)tokenName
+                      unitDP:(NSUInteger)unitDP
+             contractAddress:(NSString*)contractAddress;
+
 @end
 
 NS_ASSUME_NONNULL_END

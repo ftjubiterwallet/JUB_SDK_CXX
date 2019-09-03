@@ -119,4 +119,27 @@ JUB_RV JubiterBLDImpl::SignTXETH(const bool bERC20,
     return JUBR_OK;
 }
 
+JUB_RV JubiterBLDImpl::SetERC20ETHToken(const std::string& tokenName, const JUB_UINT16 unitDP, const std::string& contractAddress) {
+
+    uchar_vector lvName = Tollv(tokenName);
+    uchar_vector address;
+    address << ETHHexStr2CharPtr(contractAddress);
+
+    uchar_vector data;
+    data << (uint8_t)unitDP;
+    data << (uint8_t)lvName.size();
+    data << lvName;
+    data << (uint8_t)address.size();
+    data << address;
+
+    APDU apdu(0x00, 0xc7, 0x00, 0x00, (JUB_ULONG)data.size(), data.data());
+    JUB_UINT16 ret = 0;
+    JUB_VERIFY_RV(_SendApdu(&apdu, ret));
+    if (0x9000 != ret) {
+        return JUBR_TRANSMIT_DEVICE_ERROR;
+    }
+
+    return JUBR_OK;
+}
+
 } // namespace jub end

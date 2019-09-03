@@ -35,21 +35,24 @@ public:
     };
     ~ContextETH() {};
 
-    virtual JUB_RV GetAddress(BIP32_Path path, JUB_UINT16 tag, std::string& address);
-    virtual JUB_RV SetMyAddress(BIP32_Path path, std::string& address);
-    virtual JUB_RV GetHDNode(JUB_BYTE format, BIP32_Path path, std::string& pubkey);
-    virtual JUB_RV GetMainHDNode(JUB_BYTE format, std::string& xpub);
+    virtual JUB_RV GetAddress(const BIP32_Path& path, const JUB_UINT16 tag, std::string& address);
+    virtual JUB_RV SetMyAddress(const BIP32_Path& path, std::string& address);
+    virtual JUB_RV GetHDNode(const JUB_BYTE format, const BIP32_Path& path, std::string& pubkey);
+    virtual JUB_RV GetMainHDNode(const JUB_BYTE format, std::string& xpub);
 
-    virtual JUB_RV SignTransaction(IN BIP32_Path path,
-                                   IN JUB_UINT32 nonce,
-                                   IN JUB_UINT32 gasLimit,
-                                   IN JUB_CHAR_PTR gasPriceInWei,
-                                   IN JUB_CHAR_PTR to,
-                                   IN JUB_CHAR_PTR valueInWei,
-                                   IN JUB_CHAR_PTR input,
+    virtual JUB_RV SignTransaction(IN const BIP32_Path& path,
+                                   IN const JUB_UINT32 nonce,
+                                   IN const JUB_UINT32 gasLimit,
+                                   IN const JUB_CHAR_PTR gasPriceInWei,
+                                   IN const JUB_CHAR_PTR to,
+                                   IN const JUB_CHAR_PTR valueInWei,
+                                   IN const JUB_CHAR_PTR input,
                                    OUT std::string& raw);
 
-    virtual JUB_RV BuildERC20Abi(JUB_CHAR_PTR to, JUB_CHAR_PTR value, std::string& abi);
+    virtual JUB_RV BuildERC20Abi(const JUB_CHAR_PTR to, const JUB_CHAR_PTR value, std::string& abi);
+    virtual JUB_RV SetERC20ETHToken(const JUB_CHAR_PTR pTokenName,
+                                    const JUB_UINT16 unitDP,
+                                    const JUB_CHAR_PTR pContractAddress);
     virtual JUB_RV ActiveSelf();
 
 private:

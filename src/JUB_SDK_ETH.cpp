@@ -201,3 +201,27 @@ JUB_RV JUB_BuildERC20AbiETH(IN JUB_UINT16 contextID,
 
     return JUBR_OK;
 }
+
+/*****************************************************************************
+ * @function name : JUB_SetERC20ETHToken
+ * @in  param : contextID - context ID
+ *            : tokenName - ETH token name
+ *            : unitDP - unit decimal place
+ *            : contractAddress - contract address
+ * @out param : none
+ * @last change :
+ *****************************************************************************/
+JUB_RV JUB_SetERC20ETHToken(IN JUB_UINT16 contextID,
+                            IN JUB_CHAR_PTR tokenName,
+                            IN JUB_UINT16 unitDP,
+                            IN JUB_CHAR_PTR contractAddress) {
+
+    JUB_CHECK_CONTEXT_ETH(contextID);
+
+    auto context = (jub::ContextETH*)jub::ContextManager::GetInstance()->GetOne(contextID);
+    JUB_CHECK_NULL(context);
+
+    JUB_VERIFY_RV(context->SetERC20ETHToken(tokenName, unitDP, contractAddress));
+
+    return JUBR_OK;
+}

@@ -135,4 +135,23 @@ JUB_RV ContextETH::BuildERC20Abi(const JUB_CHAR_PTR to, const JUB_CHAR_PTR value
     return JUBR_OK;
 }
 
+JUB_RV ContextETH::SetERC20ETHToken(const JUB_CHAR_PTR pTokenName,
+                                    const JUB_UINT16 unitDP,
+                                    const JUB_CHAR_PTR pContractAddress) {
+
+    JUB_CHECK_NULL(pTokenName);
+    JUB_CHECK_NULL(pContractAddress);
+
+    auto token = dynamic_cast<ETHTokenInterface*>(jub::TokenManager::GetInstance()->GetOne(_deviceID));
+    JUB_CHECK_NULL(token);
+
+    std::string tokenName = std::string(pTokenName);
+    std::string contractAddress = std::string(pContractAddress);
+    JUB_VERIFY_RV(token->SetERC20ETHToken(tokenName,
+                                          unitDP,
+                                          contractAddress));
+
+    return JUBR_OK;
+}
+
 } // namespace jub end
