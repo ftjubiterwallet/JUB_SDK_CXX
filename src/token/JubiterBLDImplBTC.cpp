@@ -23,7 +23,7 @@ JUB_RV JubiterBLDImpl::SelectAppletBTC() {
     return JUBR_OK;
 }
 
-JUB_RV JubiterBLDImpl::GetHDNodeBTC(JUB_BTC_TRANS_TYPE type, std::string path, std::string& xpub) {
+JUB_RV JubiterBLDImpl::GetHDNodeBTC(const JUB_BTC_TRANS_TYPE &type, const std::string& path, std::string &xpub) {
 
     uchar_vector vPath;
     vPath << path;
@@ -58,10 +58,10 @@ JUB_RV JubiterBLDImpl::GetHDNodeBTC(JUB_BTC_TRANS_TYPE type, std::string path, s
     return JUBR_OK;
 }
 
-JUB_RV JubiterBLDImpl::GetAddressBTC(JUB_BTC_TRANS_TYPE type,
-                                     std::string path,
-                                     JUB_UINT16 tag,
-                                     std::string& address) {
+JUB_RV JubiterBLDImpl::GetAddressBTC(const JUB_BTC_TRANS_TYPE& type,
+                                     const std::string& path,
+                                     const JUB_UINT16 tag,
+                                     std::string &address) {
 
     uchar_vector vPath;
     vPath << path;
@@ -98,14 +98,14 @@ JUB_RV JubiterBLDImpl::GetAddressBTC(JUB_BTC_TRANS_TYPE type,
     return JUBR_OK;
 }
 
-JUB_RV JubiterBLDImpl::SignTXBTC(JUB_BTC_TRANS_TYPE type,
+JUB_RV JubiterBLDImpl::SignTXBTC(const JUB_BTC_TRANS_TYPE& type,
                                  JUB_UINT16 inputCount,
-                                 std::vector<JUB_UINT64> vInputAmount,
-                                 std::vector<std::string> vInputPath,
-                                 std::vector<JUB_UINT16> vChangeIndex,
-                                 std::vector<std::string> vChangePath,
-                                 std::vector<JUB_BYTE> vUnsigedTrans,
-                                 std::vector<JUB_BYTE>& vRaw) {
+                                 const std::vector<JUB_UINT64>& vInputAmount,
+                                 const std::vector<std::string>& vInputPath,
+                                 const std::vector<JUB_UINT16>& vChangeIndex,
+                                 const std::vector<std::string>& vChangePath,
+                                 const std::vector<JUB_BYTE>& vUnsigedTrans,
+                                 std::vector<JUB_BYTE> &vRaw) {
     //SWITCH_TO_BTC_APP
 
     constexpr JUB_UINT32 kSendOnceLen = 230;
@@ -159,16 +159,13 @@ JUB_RV JubiterBLDImpl::SignTXBTC(JUB_BTC_TRANS_TYPE type,
     apduData.clear();
 
     //tx TLV
-    uchar_vector transTlv;
     apduData << ToTlv(0x0D, vUnsigedTrans);
 
     JUB_VERIFY_RV(_TranPack(apduData, sigType, kSendOnceLen));
     apduData.clear();
 
     //change TLV
-    uchar_vector changeIndexTLV;
     uchar_vector changeLV;
-
     changeLV << (JUB_BYTE)vChangeIndex.size();
     for (size_t i = 0; i < vChangeIndex.size(); i++) {
         changeLV << (JUB_BYTE)vChangeIndex[i];
@@ -176,6 +173,7 @@ JUB_RV JubiterBLDImpl::SignTXBTC(JUB_BTC_TRANS_TYPE type,
         changeLV << vChangePath[i];
     }
 
+    uchar_vector changeIndexTLV;
     changeIndexTLV = ToTlv(0x10, changeLV);
     apduData << changeIndexTLV;
 
@@ -240,7 +238,7 @@ JUB_RV JubiterBLDImpl::SignTXBTC(JUB_BTC_TRANS_TYPE type,
     return JUBR_OK;
 }
 
-JUB_RV JubiterBLDImpl::SetUnitBTC(JUB_BTC_UNIT_TYPE unit) {
+JUB_RV JubiterBLDImpl::SetUnitBTC(const JUB_BTC_UNIT_TYPE& unit) {
 
     APDU apdu(0x00, 0xfa, JUB_BYTE(unit), 0x00, 0x00);
     JUB_UINT16 ret = 0;
@@ -252,7 +250,7 @@ JUB_RV JubiterBLDImpl::SetUnitBTC(JUB_BTC_UNIT_TYPE unit) {
     return JUBR_ERROR;
 }
 
-JUB_RV JubiterBLDImpl::SetCoinTypeBTC(JUB_ENUM_COINTYPE_BTC type) {
+JUB_RV JubiterBLDImpl::SetCoinTypeBTC(const JUB_ENUM_COINTYPE_BTC& type) {
 
     APDU apdu(0x00, 0xf5, (JUB_BYTE)type, 0x00, 0x00);
     JUB_UINT16 ret = 0;

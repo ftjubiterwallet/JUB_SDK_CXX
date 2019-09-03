@@ -12,7 +12,7 @@
 #include <sstream>
 #include <iostream>
 #include <cstring>
-#include "crypto/common.h"
+#include "bitcoin/crypto/common.h"
 #include "mSIGNA/stdutils/uchar_vector.h"
 #include "airbitz-core/abcd/util/Data.hpp"
 
@@ -76,9 +76,8 @@ std::array<uint8_t, 32> HexStr2CharArray(std::string str);
 */
 /*
 * std::vector<unsigned char> -> Hexadecimal string conversion
-*//*
-std::string CharPtr2HexStr(std::vector<unsigned char> v);
 */
+std::string CharPtr2HexStr(std::vector<unsigned char> v);
 /*
 * Hexadecimal string conversion -> std::vector<unsigned char>
 */
@@ -101,6 +100,7 @@ std::vector<unsigned char> ETHHexStr2CharPtr(std::string str);
 
 abcd::DataChunk ToTlv(uint8_t tag, const abcd::DataSlice &data);
 abcd::DataChunkList ParseTlv(const abcd::DataSlice &data);
+abcd::DataChunk Tollv(const std::string& strData);
 } // namespace jub
 
 #endif

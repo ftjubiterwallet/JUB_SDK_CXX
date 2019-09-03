@@ -9,7 +9,7 @@
 #ifndef JUB_SDK_BTC_h
 #define JUB_SDK_BTC_h
 
-#include "JUB_SDK.h"
+#include "JUB_SDK_COMM.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -26,12 +26,13 @@ typedef enum {
 typedef enum {
     p2pkh = 0,
     //p2pwpkh,
-    p2sh_p2wpkh
+    p2sh_p2wpkh,
 /*
      p2sh_multisig,
      p2wsh_multisig,
      p2sh_p2wsh_multisig,
 */
+    trans_type_ns_item
 } JUB_BTC_TRANS_TYPE;
 
 typedef enum {
@@ -39,47 +40,72 @@ typedef enum {
     cBTC,
     mBTC,
     uBTC,
-    Satoshi
+    Satoshi,
+    ns
 } JUB_BTC_UNIT_TYPE;
 
-typedef struct {
+typedef struct stContextCfgBTC : stContextCfg {
     JUB_ENUM_COINTYPE_BTC   coinType;// = { JUB_ENUM_COINTYPE_BTC::COINBTC };
-
-    JUB_CHAR_PTR            mainPath;
     JUB_BTC_TRANS_TYPE      transType;
+
+    stContextCfgBTC() = default;
+    stContextCfgBTC(JUB_ENUM_COINTYPE_BTC _coinType,
+                    JUB_CHAR_PTR _mainPath,
+                    JUB_BTC_TRANS_TYPE _transType) {
+         mainPath = _mainPath;
+         coinType =  _coinType;
+        transType = _transType;
+    }
+
+    virtual ~stContextCfgBTC() {}
 } CONTEXT_CONFIG_BTC;
 
-typedef struct {
+typedef enum {
+    P2PKH   = 0x00,
+    RETURN0 = 0x01,
+    P2SH_MULTISIG = 0x02,
+} SCRIPT_BTC_TYPE;
+
+typedef struct stInput {
+    SCRIPT_BTC_TYPE type;
     JUB_CHAR_PTR    preHash;
     JUB_UINT16      preIndex;
+    JUB_UINT32      nSequence;
     JUB_UINT64      amount;
     BIP32_Path      path;
+
+     stInput();
+    ~stInput() = default;
 } INPUT_BTC;
 
-typedef enum {
-    P2PKH = 0x00,
-    RETURN0 = 0x01
-} OUTPUT_BTC_TYPE;
-
-typedef struct {
+typedef struct stOutput {
     JUB_CHAR_PTR    address;
     JUB_UINT64      amount;
     JUB_ENUM_BOOL   changeAddress;
     BIP32_Path      path;
-} OUTPUT_P2PKH;
 
-typedef struct {
+     stOutput();
+    ~stOutput() = default;
+} OUTPUT;
+
+typedef struct stOutputReturn0 {
     JUB_UINT64      amount;
     JUB_UINT16      dataLen;
     JUB_BYTE        data[40];
+
+     stOutputReturn0();
+    ~stOutputReturn0() = default;
 } OUTPUT_RETURN0;
 
-typedef struct {
-    OUTPUT_BTC_TYPE type;
+typedef struct stOutputBTC {
+    SCRIPT_BTC_TYPE type;
     union {
-        OUTPUT_P2PKH   outputP2pkh;
-        OUTPUT_RETURN0 outputReturn0;
+        OUTPUT stdOutput;
+        OUTPUT_RETURN0 return0;
     };
+
+     stOutputBTC();
+    ~stOutputBTC() = default;
 } OUTPUT_BTC;
 
 /*****************************************************************************

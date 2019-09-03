@@ -25,9 +25,9 @@ do {                                                                \
 
 namespace jub {
 
-class ContextBTC : public Context{
-
+class ContextBTC : public Context {
 public:
+    ContextBTC() {};
     ContextBTC(CONTEXT_CONFIG_BTC cfg, JUB_UINT16 deviceID) {
         _mainPath = cfg.mainPath;
         _transType = cfg.transType;
@@ -38,15 +38,15 @@ public:
     };
     ~ContextBTC() {};
 
-    virtual JUB_RV GetHDNode(BIP32_Path path, std::string& xpub);
+    virtual JUB_RV GetHDNode(const BIP32_Path& path, std::string& xpub);
     virtual JUB_RV GetMainHDNode(std::string& xpub);
 
-    virtual JUB_RV GetAddress(BIP32_Path path, JUB_UINT16 tag, std::string& address);
-    virtual JUB_RV SetMyAddress(BIP32_Path path, std::string& address);
-    virtual JUB_RV SignTX(std::vector<INPUT_BTC> vInputs, std::vector<OUTPUT_BTC> vOutputs, JUB_UINT32 lockTime,  std::string& raw);
-    virtual JUB_RV SetUnit(JUB_BTC_UNIT_TYPE unitType);
+    virtual JUB_RV GetAddress(const BIP32_Path& path, const JUB_UINT16 tag, std::string& address);
+    virtual JUB_RV SetMyAddress(const BIP32_Path& path, std::string& address);
+    virtual JUB_RV SignTX(const std::vector<INPUT_BTC>& vInputs, const std::vector<OUTPUT_BTC>& vOutputs, const JUB_UINT32 lockTime,  std::string& raw);
+    virtual JUB_RV SetUnit(const JUB_BTC_UNIT_TYPE& unitType);
 
-    virtual JUB_RV BuildUSDTOutputs(IN JUB_CHAR_PTR USDTTo, IN JUB_UINT64 amount, OUT OUTPUT_BTC outputs[2]);
+    virtual JUB_RV BuildUSDTOutputs(IN const JUB_CHAR_PTR USDTTo, IN  const JUB_UINT64 amount, OUT OUTPUT_BTC outputs[2]);
     virtual JUB_RV ActiveSelf();
 
 private:

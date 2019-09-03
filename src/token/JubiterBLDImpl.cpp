@@ -128,7 +128,7 @@ JUB_RV JubiterBLDImpl::EnumSupportCoins(std::string& coinList) {
     return JUBR_OK;
 }
 
-JUB_RV JubiterBLDImpl::GetAppletVersion(std::string appID, std::string& version) {
+JUB_RV JubiterBLDImpl::GetAppletVersion(const std::string& appID, std::string& version) {
 
     uchar_vector id(appID);
     if (0 == appID.length()) {

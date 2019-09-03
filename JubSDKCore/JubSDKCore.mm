@@ -18,6 +18,45 @@
 @synthesize addressIndex;
 @end
 
+//typedef struct stContextCfg {
+//    JUB_CHAR_PTR            main_path;
+//} CONTEXT_CONFIG;
+@implementation ContextConfig
+@synthesize mainPath;
+@end
+
+JUB_ENUM_BOOL (^inlineBool)(JUB_NS_ENUM_BOOL) = ^(JUB_NS_ENUM_BOOL argument) {
+    JUB_ENUM_BOOL b;
+    switch (argument) {
+        case BOOL_NS_FALSE:
+            b = BOOL_FALSE;
+            break;
+        case BOOL_NS_TRUE:
+            b = BOOL_TRUE;
+            break;
+        case BOOL_NS_NR_ITEMS:
+            b = BOOL_NR_ITEMS;
+            break;
+    }
+    return b;
+};
+
+JUB_NS_ENUM_BOOL (^inlineNSBool)(JUB_ENUM_BOOL) = ^(JUB_ENUM_BOOL argument) {
+    JUB_NS_ENUM_BOOL b;
+    switch (argument) {
+        case BOOL_FALSE:
+            b = BOOL_NS_FALSE;
+            break;
+        case BOOL_TRUE:
+            b = BOOL_NS_TRUE;
+            break;
+        case BOOL_NR_ITEMS:
+            b = BOOL_NS_NR_ITEMS;
+            break;
+    }
+    return b;
+};
+
 @implementation JubSDKCore
 - (NSUInteger)JUB_LastError
 {

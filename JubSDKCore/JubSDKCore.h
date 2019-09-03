@@ -40,6 +40,12 @@ typedef NS_ENUM(NSInteger, JUB_NS_ENUM_BOOL) {
 @property (atomic, assign) NSInteger addressIndex;
 @end
 
+//typedef struct stContextCfg {
+//    JUB_CHAR_PTR            main_path;
+//} CONTEXT_CONFIG;
+@interface ContextConfig : NSObject
+@property (atomic, copy  ) NSString* mainPath;
+@end
 
 @interface JubSDKCore : NSObject
 @property (atomic, assign) NSUInteger lastError;

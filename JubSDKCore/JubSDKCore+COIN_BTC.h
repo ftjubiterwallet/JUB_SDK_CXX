@@ -42,11 +42,12 @@ typedef NS_ENUM(NSInteger, JUB_NS_BTC_TRANS_TYPE) {
 
 //typedef enum {
 //    P2PKH   = 0x00,
-//    RETURN0 = 0x01
-//} OUTPUT_BTC_TYPE;
-typedef NS_ENUM(NSInteger, JUB_NS_OUTPUT_BTC_TYPE) {
+//    RETURN0 = 0x01,
+//} SCRIPT_BTC_TYPE;
+typedef NS_ENUM(NSInteger, JUB_NS_SCRIPT_BTC_TYPE) {
     NS_P2PKH = 0x00,
-    NS_RETURN0 = 0x01
+    NS_RETURN0 = 0x01,
+    NS_SCRIPT_BTC_TYPE_NS
 };
 
 //typedef enum {
@@ -61,29 +62,34 @@ typedef NS_ENUM(NSInteger, JUB_NS_BTC_UNIT_TYPE) {
     NS_cBTC,
     NS_mBTC,
     NS_uBTC,
-    NS_Satoshi
+    NS_Satoshi,
+    NS_BTC_UNIT_TYPE_NS
 };
 
-//typedef struct {
+//typedef struct stInput {
+//    SCRIPT_BTC_TYPE type;
 //    JUB_CHAR_PTR    preHash;
 //    JUB_UINT16      preIndex;
+//    JUB_UINT32      nSequence;
 //    JUB_UINT64      amount;
 //    BIP32_Path      path;
 //} INPUT_BTC;
 @interface InputBTC : NSObject
+@property (atomic, assign) JUB_NS_SCRIPT_BTC_TYPE type;
 @property (atomic, copy  ) NSString* _Nonnull preHash;
 @property (atomic, assign) NSInteger preIndex;
+@property (atomic, assign) NSUInteger nSequence;
 @property (atomic, assign) NSInteger amount;
 @property (atomic, strong) BIP32Path* path;
 @end
 
-//typedef struct {
+//typedef struct stOutput {
 //    JUB_CHAR_PTR    address;
 //    JUB_UINT64      amount;
 //    JUB_ENUM_BOOL   change_address;
 //    BIP32_Path      path;
-//} OUTPUT_P2PKH;
-@interface OP2pkh : NSObject
+//} OUTPUT;
+@interface StdOutput : NSObject
 @property (atomic, copy  ) NSString* _Nonnull address;
 @property (atomic, assign) NSInteger amount;
 @property (atomic, assign) JUB_NS_ENUM_BOOL isChangeAddress;
@@ -101,37 +107,33 @@ typedef NS_ENUM(NSInteger, JUB_NS_BTC_UNIT_TYPE) {
 @end
 
 //typedef struct {
-//    OUTPUT_BTC_TYPE type;
+//    SCRIPT_BTC_TYPE type;
 //    union {
-//        OUTPUT_P2PKH   output_p2pkh;
-//        OUTPUT_RETURN0 output_return0;
+//        OUTPUT stdOutput;
+//        OUTPUT_RETURN0 return0;
 //    };
 //} OUTPUT_BTC;
-//@interface OutputP2pkh : NSObject
-//@property (nonatomic, assign) JUB_NS_OUTPUT_BTC_TYPE type;
-//@property (nonatomic, strong) OP2pkh* output;
+//@interface StdOutput : NSObject
+//@property (nonatomic, assign) JUB_NS_SCRIPT_BTC_TYPE type;
+//@property (nonatomic, assign) StdOutput* stdOutput;
 //@end
 //
 //@interface OutputReturn0 : NSObject
-//@property (nonatomic, assign) JUB_NS_OUTPUT_BTC_TYPE type;
-//@property (nonatomic, strong) OReturn0* output;
+//@property (nonatomic, assign) JUB_NS_SCRIPT_BTC_TYPE type;
+//@property (nonatomic, assign) OReturn0* output;
 //@end
 @interface OutputBTC : NSObject
-@property (atomic, assign) JUB_NS_OUTPUT_BTC_TYPE type;
-@property (atomic, strong) OP2pkh* p2pkh;
+@property (atomic, assign) JUB_NS_SCRIPT_BTC_TYPE type;
+@property (atomic, strong) StdOutput* stdOutput;
 @property (atomic, strong) OReturn0* return0;
 @end
 
-
-//typedef struct {
+//typedef struct stContextCfgBTC : stContextCfg {
 //    JUB_ENUM_COINTYPE_BTC   cointype;// = { JUB_ENUM_COINTYPE_BTC::COINBTC };
-//
-//    JUB_CHAR_PTR            main_path;
 //    JUB_BTC_TRANS_TYPE      transtype;
 //} CONTEXT_CONFIG_BTC;
-@interface ContextConfigBTC : NSObject
+@interface ContextConfigBTC : ContextConfig
 @property (atomic, assign) JUB_NS_ENUM_COINTYPE_BTC coinType;
-@property (atomic, copy  ) NSString* _Nonnull mainPath;
 @property (atomic, assign) JUB_NS_BTC_TRANS_TYPE transType;
 @end
 

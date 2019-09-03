@@ -120,7 +120,8 @@ typedef JUB_BYTE JUB_PTR            JUB_BYTE_PTR;
 typedef JUB_UCHAR JUB_PTR           JUB_UCHAR_PTR;
 typedef JUB_UTF8UCHAR JUB_PTR       JUB_UTF8UCHAR_PTR;
 typedef JUB_ULONG JUB_PTR           JUB_ULONG_PTR;
-typedef JUB_UINT64 JUB_PTR			JUB_UINT64_PTR;
+typedef JUB_UINT32 JUB_PTR          JUB_UINT32_PTR;
+typedef JUB_UINT64 JUB_PTR          JUB_UINT64_PTR;
 typedef void JUB_PTR                JUB_VOID_PTR;
 
 /* Pointer to a JUB_VOID_PTR-- i.e., pointer to pointer to void */

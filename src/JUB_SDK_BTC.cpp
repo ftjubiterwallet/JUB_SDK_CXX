@@ -12,6 +12,36 @@
 
 #include "context/ContextBTC.h"
 #include "token/interface/TokenInterface.hpp"
+#include "libBTC/libBTC.hpp"
+
+stInput::stInput() {
+    type = SCRIPT_BTC_TYPE::P2PKH;
+
+    preHash = NULL;
+    preIndex = 0;
+    nSequence = jub::btc::sequence;
+    amount = 0;
+    path.change = JUB_ENUM_BOOL::BOOL_FALSE;
+    path.addressIndex = 0;
+}
+
+stOutput::stOutput() {
+    address = NULL;
+    amount = 0;
+    changeAddress = JUB_ENUM_BOOL::BOOL_FALSE;
+    path.change = JUB_ENUM_BOOL::BOOL_FALSE;
+    path.addressIndex = 0;
+}
+
+stOutputReturn0::stOutputReturn0() {
+    amount = 0;
+    dataLen = 0;
+    memset(data, 0x00, 40);
+}
+
+stOutputBTC::stOutputBTC() {
+    type = SCRIPT_BTC_TYPE::P2PKH;
+}
 
 JUB_RV _allocMem(JUB_CHAR_PTR_PTR memPtr, const std::string &strBuf);
 
