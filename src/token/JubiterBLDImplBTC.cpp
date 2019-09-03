@@ -99,7 +99,7 @@ JUB_RV JubiterBLDImpl::GetAddressBTC(const JUB_BTC_TRANS_TYPE& type,
 }
 
 JUB_RV JubiterBLDImpl::SignTXBTC(const JUB_BTC_TRANS_TYPE& type,
-                                 JUB_UINT16 inputCount,
+                                 const JUB_UINT16 inputCount,
                                  const std::vector<JUB_UINT64>& vInputAmount,
                                  const std::vector<std::string>& vInputPath,
                                  const std::vector<JUB_UINT16>& vChangeIndex,

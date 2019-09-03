@@ -81,22 +81,43 @@ JUB_RV serializeUnsignedTx(const JUB_BTC_TRANS_TYPE type,
 
     //input
     unsignedTrans << (JUB_BYTE)vInputs.size();
+    //[preTXID][preOutputIndex][0x00][nSequence]
     for (auto input : vInputs) {
-        //preHash
-        uchar_vector preHash = std::string(input.preHash);
-        preHash.reverse();
-        unsignedTrans << preHash;
-        //preIndex
-        unsignedTrans << (JUB_UINT32)input.preIndex;
-        //sig
-        unsignedTrans << (JUB_BYTE)0x00;
-        unsignedTrans << sequence;
+        switch (input.type) {
+        case SCRIPT_BTC_TYPE::P2PKH:
+        {
+            //preHash
+            uchar_vector preHash = std::string(input.preHash);
+            preHash.reverse();
+            unsignedTrans << preHash;
+            //preIndex
+            unsignedTrans << (JUB_UINT32)input.preIndex;
+            //scriptSig: <sig> <pubkey>
+            //scriptSig: OP_0 <A sig> [B sig] [C sig] ... <redeemScript>
+            unsignedTrans << (JUB_BYTE)0x00;
+            unsignedTrans << input.nSequence;
+            break;
+        } // case SCRIPT_BTC_TYPE::P2PKH end
+        default:
+            break;
+        } // switch (input.type) end
     }
     //output
     unsignedTrans << (JUB_BYTE)vOutputs.size();
     for (auto output : vOutputs) {
         switch (output.type) {
-        case SCRIPT_BTC_TYPE::P2PKH:
+        case SCRIPT_BTC_TYPE::RETURN0:
+        {
+            unsignedTrans << (uint64_t)output.return0.amount;
+            uchar_vector scriptPub;
+            scriptPub << (JUB_BYTE)libbitcoin::machine::opcode::return_; //op_return0
+            scriptPub << (JUB_BYTE)output.return0.dataLen;
+            scriptPub.insert(scriptPub.end(), output.return0.data, output.return0.data + output.return0.dataLen);
+
+            unsignedTrans && scriptPub;
+            break;
+        } // case SCRIPT_BTC_TYPE::RETURN0 end
+        default:
         {
             //amount
             unsignedTrans << (uint64_t)output.stdOutput.amount;
@@ -105,22 +126,10 @@ JUB_RV serializeUnsignedTx(const JUB_BTC_TRANS_TYPE type,
             if (JUBR_OK != buildScriptPubFromAddress(output.stdOutput.address, scriptPub)) {
                 return JUBR_ERROR;
             }
-            unsignedTrans && scriptPub;
-            break;
-        } // case OUTPUT_BTC_TYPE::P2PKH end
-        case SCRIPT_BTC_TYPE::RETURN0:
-        {
-            unsignedTrans << (uint64_t)output.stdOutput.amount;
-            uchar_vector scriptPub;
-            scriptPub << (JUB_BYTE)libbitcoin::machine::opcode::return_; //op_return0
-            scriptPub << (JUB_BYTE)output.return0.dataLen;
-            scriptPub.insert(scriptPub.end(), output.return0.data, output.return0.data + output.return0.dataLen);
 
             unsignedTrans && scriptPub;
             break;
-        } // case OUTPUT_BTC_TYPE::RETURN0 end
-        default:
-            break;
+        } // default
         } // switch (output.type) end
     }
 

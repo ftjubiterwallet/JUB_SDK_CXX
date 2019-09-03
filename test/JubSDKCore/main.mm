@@ -127,10 +127,6 @@ void main_test() {
         NSLog(@"|  5. LTC_test.                 |\n");
         NSLog(@"|  6. USDT_test.                |\n");
         NSLog(@"|  7. ETH_test & ETC_test.      |\n");
-        NSLog(@"|  81. hcash_test.              |\n");
-        NSLog(@"|  82. hcash_mutilsign_test.    |\n");
-        NSLog(@"|                               |\n");
-        NSLog(@"| 2301. QTUM_test.              |\n");
 #endif // #if USE_DEVICE
         NSLog(@"|                               |\n");
 #if TREZOR_CRYPTO

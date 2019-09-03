@@ -8,7 +8,6 @@ namespace jub {
 
 namespace bch {
 
-
 JUB_RV buildScriptPubFromAddress(const std::string& address, uchar_vector& scriptPub) {
 
     auto pubkeyDataBit5 = cashaddr::Decode(address);
@@ -46,15 +45,23 @@ JUB_RV serializeUnsignedTx(const JUB_BTC_TRANS_TYPE type,
     //input
     unsignedTrans << (JUB_BYTE)vInputs.size();
     for (auto input : vInputs) {
-        //preHash
-        uchar_vector preHash = std::string(input.preHash);
-        preHash.reverse();
-        unsignedTrans << preHash;
-        //preIndex
-        unsignedTrans << (JUB_UINT32)input.preIndex;
-        //sig
-        unsignedTrans << (JUB_BYTE)0;
-        unsignedTrans << sequence;
+        switch (input.type) {
+        case SCRIPT_BTC_TYPE::P2PKH:
+        {
+            //preHash
+            uchar_vector preHash = std::string(input.preHash);
+            preHash.reverse();
+            unsignedTrans << preHash;
+            //preIndex
+            unsignedTrans << (JUB_UINT32)input.preIndex;
+            //sig
+            unsignedTrans << (JUB_BYTE)0;
+            unsignedTrans << sequence;
+            break;
+        } // case SCRIPT_BTC_TYPE::P2PKH end
+        default:
+            return JUBR_ARGUMENTS_BAD;
+        }
     }
 
     //output

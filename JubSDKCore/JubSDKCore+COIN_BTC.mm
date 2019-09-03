@@ -10,14 +10,18 @@
 #import "JUB_SDK_BTC.h"
 
 //typedef struct stInput {
+//    SCRIPT_BTC_TYPE type;
 //    JUB_CHAR_PTR    preHash;
 //    JUB_UINT16      preIndex;
-//    JUB_UINT64        amount;
+//    JUB_UINT32      nSequence;
+//    JUB_UINT64      amount;
 //    BIP32_Path      path;
 //} INPUT_BTC;
 @implementation InputBTC
+@synthesize type;
 @synthesize preHash;
 @synthesize preIndex;
+@synthesize nSequence;
 @synthesize amount;
 @synthesize path;
 @end
@@ -71,8 +75,8 @@
 @end
 
 //typedef struct stContextCfgBTC : stContextCfg {
-//    JUB_ENUM_COINTYPE_BTC   cointype;// = { JUB_ENUM_COINTYPE_BTC::COINBTC };
-//    JUB_BTC_TRANS_TYPE      transtype;
+//    JUB_ENUM_COINTYPE_BTC   coinType;// = { JUB_ENUM_COINTYPE_BTC::COINBTC };
+//    JUB_BTC_TRANS_TYPE      transType;
 //} CONTEXT_CONFIG_BTC;
 @implementation ContextConfigBTC
 @synthesize coinType;
@@ -318,6 +322,7 @@ OutputBTC* (^inlineNSTransOutputBTC)(OUTPUT_BTC) = ^(OUTPUT_BTC outputBTC) {
     JUB_UINT16 contextID = 0;
     switch (transType) {
         case p2pkh:
+        case p2sh_p2wpkh:
         {
             CONTEXT_CONFIG_BTC ctxCfg;
             ctxCfg.coinType = coinType;
