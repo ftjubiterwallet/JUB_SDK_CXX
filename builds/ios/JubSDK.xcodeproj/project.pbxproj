@@ -16,6 +16,61 @@
 		672C960E22DF45300073AB0D /* JUB_SDK_DEV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 672C960C22DF45300073AB0D /* JUB_SDK_DEV.cpp */; };
 		672C961222DF46A70073AB0D /* JUB_SDK_DEV_BLE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 672C961022DF46A70073AB0D /* JUB_SDK_DEV_BLE.cpp */; };
 		678C1BF822E03DA700D9A4CD /* JUB_SDK_COMM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678C1BF722E03DA600D9A4CD /* JUB_SDK_COMM.cpp */; };
+		67B48148231F8D5D000C6DFB /* libBTC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67B48147231F8D5C000C6DFB /* libBTC.cpp */; };
+		67B4814B231F8D76000C6DFB /* libBCH.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67B4814A231F8D76000C6DFB /* libBCH.cpp */; };
+		67B48198231F92B4000C6DFB /* fe.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48197231F92B3000C6DFB /* fe.c */; };
+		67B4819B231F92C7000C6DFB /* ed25519_ref10.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48199231F92C7000C6DFB /* ed25519_ref10.c */; };
+		67B4819C231F92C7000C6DFB /* ed25519_ref10_fe_25_5.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B4819A231F92C7000C6DFB /* ed25519_ref10_fe_25_5.c */; };
+		67B4819E231F92D8000C6DFB /* keypair.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B4819D231F92D8000C6DFB /* keypair.c */; };
+		67B481A5231F92F7000C6DFB /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B4819F231F92F6000C6DFB /* sha3.c */; };
+		67B481A6231F92F7000C6DFB /* schnorr.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481A0231F92F6000C6DFB /* schnorr.c */; };
+		67B481A7231F92F7000C6DFB /* scrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481A1231F92F6000C6DFB /* scrypt.c */; };
+		67B481A8231F92F7000C6DFB /* secp256k1.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481A2231F92F6000C6DFB /* secp256k1.c */; };
+		67B481A9231F92F7000C6DFB /* sha2.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481A3231F92F7000C6DFB /* sha2.c */; };
+		67B481AA231F92F7000C6DFB /* script.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481A4231F92F7000C6DFB /* script.c */; };
+		67B481AD231F9315000C6DFB /* base58.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481AC231F9315000C6DFB /* base58.c */; };
+		67B481B5231F9331000C6DFB /* pbkdf2.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481AE231F9331000C6DFB /* pbkdf2.c */; };
+		67B481B6231F9331000C6DFB /* rand.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481AF231F9331000C6DFB /* rand.c */; };
+		67B481B7231F9331000C6DFB /* nist256p1.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481B1231F9331000C6DFB /* nist256p1.c */; };
+		67B481B8231F9331000C6DFB /* nem.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481B2231F9331000C6DFB /* nem.c */; };
+		67B481B9231F9331000C6DFB /* rc4.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481B3231F9331000C6DFB /* rc4.c */; };
+		67B481BA231F9331000C6DFB /* nano.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481B4231F9331000C6DFB /* nano.c */; };
+		67B481CA231F9366000C6DFB /* hasher.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481C6231F9365000C6DFB /* hasher.c */; };
+		67B481CB231F9366000C6DFB /* groestl.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481C7231F9365000C6DFB /* groestl.c */; };
+		67B481CC231F9366000C6DFB /* memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481C8231F9365000C6DFB /* memzero.c */; };
+		67B481CD231F9366000C6DFB /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481C9231F9365000C6DFB /* hmac.c */; };
+		67B481DF231F9381000C6DFB /* ed25519.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D0231F9380000C6DFB /* ed25519.c */; };
+		67B481E0231F9381000C6DFB /* ed25519-donna-impl-base.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D2231F9380000C6DFB /* ed25519-donna-impl-base.c */; };
+		67B481E1231F9381000C6DFB /* ed25519-donna-32bit-tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D3231F9380000C6DFB /* ed25519-donna-32bit-tables.c */; };
+		67B481E2231F9381000C6DFB /* ed25519-donna-basepoint-table.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D5231F9380000C6DFB /* ed25519-donna-basepoint-table.c */; };
+		67B481E3231F9381000C6DFB /* ed25519-keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D6231F9380000C6DFB /* ed25519-keccak.c */; };
+		67B481E4231F9381000C6DFB /* curve25519-donna-32bit.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D7231F9380000C6DFB /* curve25519-donna-32bit.c */; };
+		67B481E5231F9381000C6DFB /* ed25519-blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D8231F9380000C6DFB /* ed25519-blake2b.c */; };
+		67B481E6231F9381000C6DFB /* modm-donna-32bit.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481D9231F9380000C6DFB /* modm-donna-32bit.c */; };
+		67B481E7231F9381000C6DFB /* curve25519-donna-scalarmult-base.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481DB231F9380000C6DFB /* curve25519-donna-scalarmult-base.c */; };
+		67B481E8231F9381000C6DFB /* curve25519-donna-helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481DC231F9380000C6DFB /* curve25519-donna-helpers.c */; };
+		67B481E9231F9381000C6DFB /* ed25519-sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481DD231F9381000C6DFB /* ed25519-sha3.c */; };
+		67B481ED231F93A1000C6DFB /* curves.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481EA231F93A0000C6DFB /* curves.c */; };
+		67B481EE231F93A1000C6DFB /* ecdsa.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481EC231F93A0000C6DFB /* ecdsa.c */; };
+		67B481F8231F93BC000C6DFB /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481F1231F93BC000C6DFB /* poly1305-donna.c */; };
+		67B481F9231F93BC000C6DFB /* rfc7539.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481F2231F93BC000C6DFB /* rfc7539.c */; };
+		67B481FA231F93BC000C6DFB /* chacha_merged.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481F5231F93BC000C6DFB /* chacha_merged.c */; };
+		67B481FB231F93BC000C6DFB /* chacha20poly1305.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481F7231F93BC000C6DFB /* chacha20poly1305.c */; };
+		67B48207231F93D3000C6DFB /* bip39.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481FC231F93D2000C6DFB /* bip39.c */; };
+		67B48208231F93D3000C6DFB /* base32.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481FD231F93D2000C6DFB /* base32.c */; };
+		67B48209231F93D3000C6DFB /* base58.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B481FE231F93D2000C6DFB /* base58.c */; };
+		67B4820A231F93D3000C6DFB /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48200231F93D3000C6DFB /* blake2b.c */; };
+		67B4820B231F93D3000C6DFB /* blake2s.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48201231F93D3000C6DFB /* blake2s.c */; };
+		67B4820C231F93D3000C6DFB /* blake256.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48203231F93D3000C6DFB /* blake256.c */; };
+		67B4820D231F93D3000C6DFB /* cash_addr.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48204231F93D3000C6DFB /* cash_addr.c */; };
+		67B4820E231F93D3000C6DFB /* bignum.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48205231F93D3000C6DFB /* bignum.c */; };
+		67B4820F231F93D3000C6DFB /* bip32.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48206231F93D3000C6DFB /* bip32.c */; };
+		67B48217231F93ED000C6DFB /* aes_modes.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48213231F93ED000C6DFB /* aes_modes.c */; };
+		67B48218231F93ED000C6DFB /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48214231F93ED000C6DFB /* aescrypt.c */; };
+		67B48219231F93ED000C6DFB /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48215231F93ED000C6DFB /* aestab.c */; };
+		67B4821A231F93ED000C6DFB /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B48216231F93ED000C6DFB /* aeskey.c */; };
+		67B4821C231F9400000C6DFB /* address.c in Sources */ = {isa = PBXBuildFile; fileRef = 67B4821B231F9400000C6DFB /* address.c */; };
+		67B4821F231F94C1000C6DFB /* segwit_addr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67B4821E231F94C1000C6DFB /* segwit_addr.cpp */; };
 		67B9563622DC707600E90AF9 /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67B9563522DC707600E90AF9 /* Data.cpp */; };
 		67C4B5AC22CEFB6A00F85860 /* BigInteger.cc in Sources */ = {isa = PBXBuildFile; fileRef = 67C4B5A322CEFB6A00F85860 /* BigInteger.cc */; };
 		67C4B5AD22CEFB6A00F85860 /* BigUnsigned.cc in Sources */ = {isa = PBXBuildFile; fileRef = 67C4B5A422CEFB6A00F85860 /* BigUnsigned.cc */; };
@@ -83,6 +138,133 @@
 		6737F3A422CF57EB0019DF07 /* opcode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = opcode.hpp; path = ../../../../../deps/libbitcoin/machine/opcode.hpp; sourceTree = "<group>"; };
 		678C1BF622E03D6100D9A4CD /* JUB_SDK_COMM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUB_SDK_COMM.h; sourceTree = "<group>"; };
 		678C1BF722E03DA600D9A4CD /* JUB_SDK_COMM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JUB_SDK_COMM.cpp; sourceTree = "<group>"; };
+		67B48147231F8D5C000C6DFB /* libBTC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libBTC.cpp; path = libBTC/libBTC.cpp; sourceTree = "<group>"; };
+		67B4814A231F8D76000C6DFB /* libBCH.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libBCH.cpp; path = libBCH/libBCH.cpp; sourceTree = "<group>"; };
+		67B4814F231F8FC8000C6DFB /* TrezorCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrezorCrypto.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/TrezorCrypto.h"; sourceTree = "<group>"; };
+		67B48152231F900F000C6DFB /* keypair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = keypair.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/sodium/keypair.h"; sourceTree = "<group>"; };
+		67B48154231F9036000C6DFB /* ed25519_ref10_fe_25_5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ed25519_ref10_fe_25_5.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/sodium/private/ed25519_ref10_fe_25_5.h"; sourceTree = "<group>"; };
+		67B48155231F9036000C6DFB /* ed25519_ref10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ed25519_ref10.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/sodium/private/ed25519_ref10.h"; sourceTree = "<group>"; };
+		67B48157231F9058000C6DFB /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/sodium/private/fe_25_5/constants.h"; sourceTree = "<group>"; };
+		67B48158231F9058000C6DFB /* fe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fe.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/sodium/private/fe_25_5/fe.h"; sourceTree = "<group>"; };
+		67B48159231F9073000C6DFB /* schnorr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = schnorr.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/schnorr.h"; sourceTree = "<group>"; };
+		67B4815A231F9073000C6DFB /* script.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = script.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/script.h"; sourceTree = "<group>"; };
+		67B4815B231F9073000C6DFB /* sha2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha2.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/sha2.h"; sourceTree = "<group>"; };
+		67B4815C231F9073000C6DFB /* secp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = secp256k1.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/secp256k1.h"; sourceTree = "<group>"; };
+		67B4815D231F9073000C6DFB /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha3.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/sha3.h"; sourceTree = "<group>"; };
+		67B4815E231F9073000C6DFB /* scrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scrypt.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/scrypt.h"; sourceTree = "<group>"; };
+		67B4815F231F908D000C6DFB /* base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base58.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ripple/base58.h"; sourceTree = "<group>"; };
+		67B48161231F90A2000C6DFB /* rc4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rc4.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/rc4.h"; sourceTree = "<group>"; };
+		67B48162231F90A2000C6DFB /* rfc6979.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rfc6979.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/rfc6979.h"; sourceTree = "<group>"; };
+		67B48163231F90A2000C6DFB /* pbkdf2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pbkdf2.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/pbkdf2.h"; sourceTree = "<group>"; };
+		67B48164231F90A2000C6DFB /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rand.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/rand.h"; sourceTree = "<group>"; };
+		67B48165231F90A2000C6DFB /* nist256p1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nist256p1.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/nist256p1.h"; sourceTree = "<group>"; };
+		67B48166231F90A2000C6DFB /* nem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nem.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/nem.h"; sourceTree = "<group>"; };
+		67B48167231F90A2000C6DFB /* nano.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nano.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/nano.h"; sourceTree = "<group>"; };
+		67B4816E231F91F0000C6DFB /* hasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hasher.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/hasher.h"; sourceTree = "<group>"; };
+		67B4816F231F91F0000C6DFB /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = endian.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/endian.h"; sourceTree = "<group>"; };
+		67B48170231F91F0000C6DFB /* ed25519.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ed25519.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519.h"; sourceTree = "<group>"; };
+		67B48171231F91F0000C6DFB /* groestl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = groestl.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/groestl.h"; sourceTree = "<group>"; };
+		67B48172231F91F0000C6DFB /* memzero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = memzero.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/memzero.h"; sourceTree = "<group>"; };
+		67B48173231F91F0000C6DFB /* ed25519-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-donna.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna.h"; sourceTree = "<group>"; };
+		67B48174231F91F0000C6DFB /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/hmac.h"; sourceTree = "<group>"; };
+		67B48176231F921D000C6DFB /* ed25519-blake2b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-blake2b.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/ed25519-blake2b.h"; sourceTree = "<group>"; };
+		67B48177231F921D000C6DFB /* ed25519-sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-sha3.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/ed25519-sha3.h"; sourceTree = "<group>"; };
+		67B48178231F921D000C6DFB /* ed25519-donna-portable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-donna-portable.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/ed25519-donna-portable.h"; sourceTree = "<group>"; };
+		67B48179231F921D000C6DFB /* curve25519-donna-32bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "curve25519-donna-32bit.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/curve25519-donna-32bit.h"; sourceTree = "<group>"; };
+		67B4817A231F921D000C6DFB /* ed25519-donna-32bit-tables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-donna-32bit-tables.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/ed25519-donna-32bit-tables.h"; sourceTree = "<group>"; };
+		67B4817B231F921D000C6DFB /* ed25519-donna-impl-base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-donna-impl-base.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/ed25519-donna-impl-base.h"; sourceTree = "<group>"; };
+		67B4817C231F921D000C6DFB /* curve25519-donna-helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "curve25519-donna-helpers.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/curve25519-donna-helpers.h"; sourceTree = "<group>"; };
+		67B4817D231F921D000C6DFB /* ed25519-donna-basepoint-table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-donna-basepoint-table.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/ed25519-donna-basepoint-table.h"; sourceTree = "<group>"; };
+		67B4817E231F921D000C6DFB /* ed25519-keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-keccak.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/ed25519-keccak.h"; sourceTree = "<group>"; };
+		67B4817F231F921E000C6DFB /* modm-donna-32bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "modm-donna-32bit.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ed25519-donna/modm-donna-32bit.h"; sourceTree = "<group>"; };
+		67B48180231F922D000C6DFB /* curves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = curves.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/curves.h"; sourceTree = "<group>"; };
+		67B48181231F922D000C6DFB /* chacha20poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chacha20poly1305.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/chacha20poly1305.h"; sourceTree = "<group>"; };
+		67B48182231F922D000C6DFB /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ecdsa.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/ecdsa.h"; sourceTree = "<group>"; };
+		67B48184231F9248000C6DFB /* poly1305-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "poly1305-donna.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/chacha20poly1305/poly1305-donna.h"; sourceTree = "<group>"; };
+		67B48185231F9248000C6DFB /* ecrypt-sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ecrypt-sync.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/chacha20poly1305/ecrypt-sync.h"; sourceTree = "<group>"; };
+		67B48186231F9248000C6DFB /* ecrypt-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ecrypt-config.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/chacha20poly1305/ecrypt-config.h"; sourceTree = "<group>"; };
+		67B48187231F9248000C6DFB /* ecrypt-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ecrypt-types.h"; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/chacha20poly1305/ecrypt-types.h"; sourceTree = "<group>"; };
+		67B48188231F925B000C6DFB /* blake2b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blake2b.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/blake2b.h"; sourceTree = "<group>"; };
+		67B48189231F925B000C6DFB /* cash_addr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cash_addr.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/cash_addr.h"; sourceTree = "<group>"; };
+		67B4818A231F925B000C6DFB /* base32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base32.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/base32.h"; sourceTree = "<group>"; };
+		67B4818B231F925B000C6DFB /* blake256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blake256.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/blake256.h"; sourceTree = "<group>"; };
+		67B4818C231F925B000C6DFB /* bignum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bignum.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/bignum.h"; sourceTree = "<group>"; };
+		67B4818D231F925B000C6DFB /* address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = address.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/address.h"; sourceTree = "<group>"; };
+		67B4818E231F925B000C6DFB /* base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base58.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/base58.h"; sourceTree = "<group>"; };
+		67B4818F231F925B000C6DFB /* bip39.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bip39.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/bip39.h"; sourceTree = "<group>"; };
+		67B48190231F925B000C6DFB /* blake2s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blake2s.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/blake2s.h"; sourceTree = "<group>"; };
+		67B48191231F925B000C6DFB /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/aes.h"; sourceTree = "<group>"; };
+		67B48192231F925B000C6DFB /* bip32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bip32.h; path = "../../../../../deps/trezor-crypto/include/TrezorCrypto/bip32.h"; sourceTree = "<group>"; };
+		67B48197231F92B3000C6DFB /* fe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fe.c; path = "../../../../../../../../deps/trezor-crypto/src/sodium/private/fe_25_5/fe.c"; sourceTree = "<group>"; };
+		67B48199231F92C7000C6DFB /* ed25519_ref10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ed25519_ref10.c; path = "../../../../../../../../deps/trezor-crypto/src/sodium/private/ed25519_ref10.c"; sourceTree = "<group>"; };
+		67B4819A231F92C7000C6DFB /* ed25519_ref10_fe_25_5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ed25519_ref10_fe_25_5.c; path = "../../../../../../../../deps/trezor-crypto/src/sodium/private/ed25519_ref10_fe_25_5.c"; sourceTree = "<group>"; };
+		67B4819D231F92D8000C6DFB /* keypair.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = keypair.c; path = "../../../../../../../../deps/trezor-crypto/src/sodium/keypair.c"; sourceTree = "<group>"; };
+		67B4819F231F92F6000C6DFB /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha3.c; path = "../../../../../../../../deps/trezor-crypto/src/sha3.c"; sourceTree = "<group>"; };
+		67B481A0231F92F6000C6DFB /* schnorr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = schnorr.c; path = "../../../../../../../../deps/trezor-crypto/src/schnorr.c"; sourceTree = "<group>"; };
+		67B481A1231F92F6000C6DFB /* scrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scrypt.c; path = "../../../../../../../../deps/trezor-crypto/src/scrypt.c"; sourceTree = "<group>"; };
+		67B481A2231F92F6000C6DFB /* secp256k1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = secp256k1.c; path = "../../../../../../../../deps/trezor-crypto/src/secp256k1.c"; sourceTree = "<group>"; };
+		67B481A3231F92F7000C6DFB /* sha2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha2.c; path = "../../../../../../../../deps/trezor-crypto/src/sha2.c"; sourceTree = "<group>"; };
+		67B481A4231F92F7000C6DFB /* script.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = script.c; path = "../../../../../../../../deps/trezor-crypto/src/script.c"; sourceTree = "<group>"; };
+		67B481AC231F9315000C6DFB /* base58.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = base58.c; path = "../../../../../../../../deps/trezor-crypto/src/ripple/base58.c"; sourceTree = "<group>"; };
+		67B481AE231F9331000C6DFB /* pbkdf2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pbkdf2.c; path = "../../../../../../../../deps/trezor-crypto/src/pbkdf2.c"; sourceTree = "<group>"; };
+		67B481AF231F9331000C6DFB /* rand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rand.c; path = "../../../../../../../../deps/trezor-crypto/src/rand.c"; sourceTree = "<group>"; };
+		67B481B0231F9331000C6DFB /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = options.h; path = "../../../../../../../../deps/trezor-crypto/src/options.h"; sourceTree = "<group>"; };
+		67B481B1231F9331000C6DFB /* nist256p1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nist256p1.c; path = "../../../../../../../../deps/trezor-crypto/src/nist256p1.c"; sourceTree = "<group>"; };
+		67B481B2231F9331000C6DFB /* nem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nem.c; path = "../../../../../../../../deps/trezor-crypto/src/nem.c"; sourceTree = "<group>"; };
+		67B481B3231F9331000C6DFB /* rc4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rc4.c; path = "../../../../../../../../deps/trezor-crypto/src/rc4.c"; sourceTree = "<group>"; };
+		67B481B4231F9331000C6DFB /* nano.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nano.c; path = "../../../../../../../../deps/trezor-crypto/src/nano.c"; sourceTree = "<group>"; };
+		67B481C5231F9365000C6DFB /* groestl_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = groestl_internal.h; path = "../../../../../../../../deps/trezor-crypto/src/groestl_internal.h"; sourceTree = "<group>"; };
+		67B481C6231F9365000C6DFB /* hasher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hasher.c; path = "../../../../../../../../deps/trezor-crypto/src/hasher.c"; sourceTree = "<group>"; };
+		67B481C7231F9365000C6DFB /* groestl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = groestl.c; path = "../../../../../../../../deps/trezor-crypto/src/groestl.c"; sourceTree = "<group>"; };
+		67B481C8231F9365000C6DFB /* memzero.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memzero.c; path = "../../../../../../../../deps/trezor-crypto/src/memzero.c"; sourceTree = "<group>"; };
+		67B481C9231F9365000C6DFB /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = "../../../../../../../../deps/trezor-crypto/src/hmac.c"; sourceTree = "<group>"; };
+		67B481CF231F9380000C6DFB /* ed25519-hash-custom-blake2b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-hash-custom-blake2b.h"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-hash-custom-blake2b.h"; sourceTree = "<group>"; };
+		67B481D0231F9380000C6DFB /* ed25519.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ed25519.c; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519.c"; sourceTree = "<group>"; };
+		67B481D1231F9380000C6DFB /* curve25519-donna-scalarmult-base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "curve25519-donna-scalarmult-base.h"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/curve25519-donna-scalarmult-base.h"; sourceTree = "<group>"; };
+		67B481D2231F9380000C6DFB /* ed25519-donna-impl-base.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ed25519-donna-impl-base.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-donna-impl-base.c"; sourceTree = "<group>"; };
+		67B481D3231F9380000C6DFB /* ed25519-donna-32bit-tables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ed25519-donna-32bit-tables.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-donna-32bit-tables.c"; sourceTree = "<group>"; };
+		67B481D4231F9380000C6DFB /* ed25519-hash-custom-keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-hash-custom-keccak.h"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-hash-custom-keccak.h"; sourceTree = "<group>"; };
+		67B481D5231F9380000C6DFB /* ed25519-donna-basepoint-table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ed25519-donna-basepoint-table.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-donna-basepoint-table.c"; sourceTree = "<group>"; };
+		67B481D6231F9380000C6DFB /* ed25519-keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ed25519-keccak.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-keccak.c"; sourceTree = "<group>"; };
+		67B481D7231F9380000C6DFB /* curve25519-donna-32bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "curve25519-donna-32bit.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/curve25519-donna-32bit.c"; sourceTree = "<group>"; };
+		67B481D8231F9380000C6DFB /* ed25519-blake2b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ed25519-blake2b.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-blake2b.c"; sourceTree = "<group>"; };
+		67B481D9231F9380000C6DFB /* modm-donna-32bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "modm-donna-32bit.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/modm-donna-32bit.c"; sourceTree = "<group>"; };
+		67B481DA231F9380000C6DFB /* ed25519-hash-custom-sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-hash-custom-sha3.h"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-hash-custom-sha3.h"; sourceTree = "<group>"; };
+		67B481DB231F9380000C6DFB /* curve25519-donna-scalarmult-base.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "curve25519-donna-scalarmult-base.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/curve25519-donna-scalarmult-base.c"; sourceTree = "<group>"; };
+		67B481DC231F9380000C6DFB /* curve25519-donna-helpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "curve25519-donna-helpers.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/curve25519-donna-helpers.c"; sourceTree = "<group>"; };
+		67B481DD231F9381000C6DFB /* ed25519-sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ed25519-sha3.c"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-sha3.c"; sourceTree = "<group>"; };
+		67B481DE231F9381000C6DFB /* ed25519-hash-custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ed25519-hash-custom.h"; path = "../../../../../../../../deps/trezor-crypto/src/ed25519-donna/ed25519-hash-custom.h"; sourceTree = "<group>"; };
+		67B481EA231F93A0000C6DFB /* curves.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = curves.c; path = "../../../../../../../../deps/trezor-crypto/src/curves.c"; sourceTree = "<group>"; };
+		67B481EB231F93A0000C6DFB /* check_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = check_mem.h; path = "../../../../../../../../deps/trezor-crypto/src/check_mem.h"; sourceTree = "<group>"; };
+		67B481EC231F93A0000C6DFB /* ecdsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ecdsa.c; path = "../../../../../../../../deps/trezor-crypto/src/ecdsa.c"; sourceTree = "<group>"; };
+		67B481F0231F93BC000C6DFB /* rfc7539.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rfc7539.h; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/rfc7539.h"; sourceTree = "<group>"; };
+		67B481F1231F93BC000C6DFB /* poly1305-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "poly1305-donna.c"; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/poly1305-donna.c"; sourceTree = "<group>"; };
+		67B481F2231F93BC000C6DFB /* rfc7539.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rfc7539.c; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/rfc7539.c"; sourceTree = "<group>"; };
+		67B481F3231F93BC000C6DFB /* ecrypt-machine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ecrypt-machine.h"; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/ecrypt-machine.h"; sourceTree = "<group>"; };
+		67B481F4231F93BC000C6DFB /* poly1305-donna-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "poly1305-donna-32.h"; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/poly1305-donna-32.h"; sourceTree = "<group>"; };
+		67B481F5231F93BC000C6DFB /* chacha_merged.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = chacha_merged.c; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/chacha_merged.c"; sourceTree = "<group>"; };
+		67B481F6231F93BC000C6DFB /* ecrypt-portable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ecrypt-portable.h"; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/ecrypt-portable.h"; sourceTree = "<group>"; };
+		67B481F7231F93BC000C6DFB /* chacha20poly1305.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = chacha20poly1305.c; path = "../../../../../../../../deps/trezor-crypto/src/chacha20poly1305/chacha20poly1305.c"; sourceTree = "<group>"; };
+		67B481FC231F93D2000C6DFB /* bip39.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bip39.c; path = "../../../../../../../../deps/trezor-crypto/src/bip39.c"; sourceTree = "<group>"; };
+		67B481FD231F93D2000C6DFB /* base32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = base32.c; path = "../../../../../../../../deps/trezor-crypto/src/base32.c"; sourceTree = "<group>"; };
+		67B481FE231F93D2000C6DFB /* base58.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = base58.c; path = "../../../../../../../../deps/trezor-crypto/src/base58.c"; sourceTree = "<group>"; };
+		67B481FF231F93D2000C6DFB /* blake2_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blake2_common.h; path = "../../../../../../../../deps/trezor-crypto/src/blake2_common.h"; sourceTree = "<group>"; };
+		67B48200231F93D3000C6DFB /* blake2b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = blake2b.c; path = "../../../../../../../../deps/trezor-crypto/src/blake2b.c"; sourceTree = "<group>"; };
+		67B48201231F93D3000C6DFB /* blake2s.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = blake2s.c; path = "../../../../../../../../deps/trezor-crypto/src/blake2s.c"; sourceTree = "<group>"; };
+		67B48202231F93D3000C6DFB /* bip39_english.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bip39_english.h; path = "../../../../../../../../deps/trezor-crypto/src/bip39_english.h"; sourceTree = "<group>"; };
+		67B48203231F93D3000C6DFB /* blake256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = blake256.c; path = "../../../../../../../../deps/trezor-crypto/src/blake256.c"; sourceTree = "<group>"; };
+		67B48204231F93D3000C6DFB /* cash_addr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cash_addr.c; path = "../../../../../../../../deps/trezor-crypto/src/cash_addr.c"; sourceTree = "<group>"; };
+		67B48205231F93D3000C6DFB /* bignum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bignum.c; path = "../../../../../../../../deps/trezor-crypto/src/bignum.c"; sourceTree = "<group>"; };
+		67B48206231F93D3000C6DFB /* bip32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bip32.c; path = "../../../../../../../../deps/trezor-crypto/src/bip32.c"; sourceTree = "<group>"; };
+		67B48211231F93ED000C6DFB /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = "../../../../../../../../deps/trezor-crypto/src/aes/aesopt.h"; sourceTree = "<group>"; };
+		67B48212231F93ED000C6DFB /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = "../../../../../../../../deps/trezor-crypto/src/aes/aestab.h"; sourceTree = "<group>"; };
+		67B48213231F93ED000C6DFB /* aes_modes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aes_modes.c; path = "../../../../../../../../deps/trezor-crypto/src/aes/aes_modes.c"; sourceTree = "<group>"; };
+		67B48214231F93ED000C6DFB /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aescrypt.c; path = "../../../../../../../../deps/trezor-crypto/src/aes/aescrypt.c"; sourceTree = "<group>"; };
+		67B48215231F93ED000C6DFB /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aestab.c; path = "../../../../../../../../deps/trezor-crypto/src/aes/aestab.c"; sourceTree = "<group>"; };
+		67B48216231F93ED000C6DFB /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aeskey.c; path = "../../../../../../../../deps/trezor-crypto/src/aes/aeskey.c"; sourceTree = "<group>"; };
+		67B4821B231F9400000C6DFB /* address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = address.c; path = "../../../../../../../../deps/trezor-crypto/src/address.c"; sourceTree = "<group>"; };
+		67B4821D231F94C1000C6DFB /* segwit_addr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = segwit_addr.h; path = ../../../../../deps/bitcoin/segwit_addr.h; sourceTree = "<group>"; };
+		67B4821E231F94C1000C6DFB /* segwit_addr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = segwit_addr.cpp; path = ../../../../../deps/bitcoin/segwit_addr.cpp; sourceTree = "<group>"; };
 		67B9563422DC707500E90AF9 /* Data.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Data.hpp; path = "../../../../../deps/airbitz-core/abcd/util/Data.hpp"; sourceTree = "<group>"; };
 		67B9563522DC707600E90AF9 /* Data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Data.cpp; path = "../../../../../deps/airbitz-core/abcd/util/Data.cpp"; sourceTree = "<group>"; };
 		67B9563822DC73C900E90AF9 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = ../../../../../deps/bitcoin/crypto/common.h; sourceTree = "<group>"; };
@@ -181,6 +363,8 @@
 				6723139D22D3083F005BEFCC /* bech32.cpp */,
 				6723139922D3083F005BEFCC /* bech32.h */,
 				6723139A22D3083F005BEFCC /* hash.h */,
+				67B4821E231F94C1000C6DFB /* segwit_addr.cpp */,
+				67B4821D231F94C1000C6DFB /* segwit_addr.h */,
 			);
 			name = bitcoin;
 			sourceTree = "<group>";
@@ -224,6 +408,281 @@
 				6737F3A422CF57EB0019DF07 /* opcode.hpp */,
 			);
 			name = machine;
+			sourceTree = "<group>";
+		};
+		67B48146231F8D48000C6DFB /* libBTC */ = {
+			isa = PBXGroup;
+			children = (
+				67B48147231F8D5C000C6DFB /* libBTC.cpp */,
+			);
+			name = libBTC;
+			sourceTree = "<group>";
+		};
+		67B48149231F8D66000C6DFB /* libBCH */ = {
+			isa = PBXGroup;
+			children = (
+				67B4814A231F8D76000C6DFB /* libBCH.cpp */,
+			);
+			name = libBCH;
+			sourceTree = "<group>";
+		};
+		67B4814C231F8F92000C6DFB /* trezor-crypto */ = {
+			isa = PBXGroup;
+			children = (
+				67B4814D231F8FA0000C6DFB /* include */,
+				67B48193231F926B000C6DFB /* src */,
+			);
+			name = "trezor-crypto";
+			sourceTree = "<group>";
+		};
+		67B4814D231F8FA0000C6DFB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				67B4814E231F8FB1000C6DFB /* TrezorCrypto */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		67B4814E231F8FB1000C6DFB /* TrezorCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				67B4818D231F925B000C6DFB /* address.h */,
+				67B48191231F925B000C6DFB /* aes.h */,
+				67B4818A231F925B000C6DFB /* base32.h */,
+				67B4818E231F925B000C6DFB /* base58.h */,
+				67B4818C231F925B000C6DFB /* bignum.h */,
+				67B48192231F925B000C6DFB /* bip32.h */,
+				67B4818F231F925B000C6DFB /* bip39.h */,
+				67B48188231F925B000C6DFB /* blake2b.h */,
+				67B48190231F925B000C6DFB /* blake2s.h */,
+				67B4818B231F925B000C6DFB /* blake256.h */,
+				67B48189231F925B000C6DFB /* cash_addr.h */,
+				67B48183231F9237000C6DFB /* chacha20poly1305 */,
+				67B48181231F922D000C6DFB /* chacha20poly1305.h */,
+				67B48180231F922D000C6DFB /* curves.h */,
+				67B48182231F922D000C6DFB /* ecdsa.h */,
+				67B48175231F9205000C6DFB /* ed25519-donna */,
+				67B48173231F91F0000C6DFB /* ed25519-donna.h */,
+				67B48170231F91F0000C6DFB /* ed25519.h */,
+				67B4816F231F91F0000C6DFB /* endian.h */,
+				67B48171231F91F0000C6DFB /* groestl.h */,
+				67B4816E231F91F0000C6DFB /* hasher.h */,
+				67B48174231F91F0000C6DFB /* hmac.h */,
+				67B48172231F91F0000C6DFB /* memzero.h */,
+				67B48167231F90A2000C6DFB /* nano.h */,
+				67B48166231F90A2000C6DFB /* nem.h */,
+				67B48165231F90A2000C6DFB /* nist256p1.h */,
+				67B48163231F90A2000C6DFB /* pbkdf2.h */,
+				67B48164231F90A2000C6DFB /* rand.h */,
+				67B48161231F90A2000C6DFB /* rc4.h */,
+				67B48162231F90A2000C6DFB /* rfc6979.h */,
+				67B48150231F8FD1000C6DFB /* ripple */,
+				67B48159231F9073000C6DFB /* schnorr.h */,
+				67B4815A231F9073000C6DFB /* script.h */,
+				67B4815E231F9073000C6DFB /* scrypt.h */,
+				67B4815C231F9073000C6DFB /* secp256k1.h */,
+				67B4815B231F9073000C6DFB /* sha2.h */,
+				67B4815D231F9073000C6DFB /* sha3.h */,
+				67B48151231F8FF3000C6DFB /* sodium */,
+				67B4814F231F8FC8000C6DFB /* TrezorCrypto.h */,
+			);
+			name = TrezorCrypto;
+			sourceTree = "<group>";
+		};
+		67B48150231F8FD1000C6DFB /* ripple */ = {
+			isa = PBXGroup;
+			children = (
+				67B4815F231F908D000C6DFB /* base58.h */,
+			);
+			name = ripple;
+			sourceTree = "<group>";
+		};
+		67B48151231F8FF3000C6DFB /* sodium */ = {
+			isa = PBXGroup;
+			children = (
+				67B48152231F900F000C6DFB /* keypair.h */,
+				67B48153231F9018000C6DFB /* private */,
+			);
+			name = sodium;
+			sourceTree = "<group>";
+		};
+		67B48153231F9018000C6DFB /* private */ = {
+			isa = PBXGroup;
+			children = (
+				67B48154231F9036000C6DFB /* ed25519_ref10_fe_25_5.h */,
+				67B48155231F9036000C6DFB /* ed25519_ref10.h */,
+				67B48156231F903E000C6DFB /* fe_25_5 */,
+			);
+			name = private;
+			sourceTree = "<group>";
+		};
+		67B48156231F903E000C6DFB /* fe_25_5 */ = {
+			isa = PBXGroup;
+			children = (
+				67B48157231F9058000C6DFB /* constants.h */,
+				67B48158231F9058000C6DFB /* fe.h */,
+			);
+			name = fe_25_5;
+			sourceTree = "<group>";
+		};
+		67B48175231F9205000C6DFB /* ed25519-donna */ = {
+			isa = PBXGroup;
+			children = (
+				67B48179231F921D000C6DFB /* curve25519-donna-32bit.h */,
+				67B4817C231F921D000C6DFB /* curve25519-donna-helpers.h */,
+				67B48176231F921D000C6DFB /* ed25519-blake2b.h */,
+				67B4817A231F921D000C6DFB /* ed25519-donna-32bit-tables.h */,
+				67B4817D231F921D000C6DFB /* ed25519-donna-basepoint-table.h */,
+				67B4817B231F921D000C6DFB /* ed25519-donna-impl-base.h */,
+				67B48178231F921D000C6DFB /* ed25519-donna-portable.h */,
+				67B4817E231F921D000C6DFB /* ed25519-keccak.h */,
+				67B48177231F921D000C6DFB /* ed25519-sha3.h */,
+				67B4817F231F921E000C6DFB /* modm-donna-32bit.h */,
+			);
+			name = "ed25519-donna";
+			sourceTree = "<group>";
+		};
+		67B48183231F9237000C6DFB /* chacha20poly1305 */ = {
+			isa = PBXGroup;
+			children = (
+				67B48186231F9248000C6DFB /* ecrypt-config.h */,
+				67B48185231F9248000C6DFB /* ecrypt-sync.h */,
+				67B48187231F9248000C6DFB /* ecrypt-types.h */,
+				67B48184231F9248000C6DFB /* poly1305-donna.h */,
+			);
+			name = chacha20poly1305;
+			sourceTree = "<group>";
+		};
+		67B48193231F926B000C6DFB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				67B4821B231F9400000C6DFB /* address.c */,
+				67B48210231F93DB000C6DFB /* aes */,
+				67B481FD231F93D2000C6DFB /* base32.c */,
+				67B481FE231F93D2000C6DFB /* base58.c */,
+				67B48205231F93D3000C6DFB /* bignum.c */,
+				67B48206231F93D3000C6DFB /* bip32.c */,
+				67B48202231F93D3000C6DFB /* bip39_english.h */,
+				67B481FC231F93D2000C6DFB /* bip39.c */,
+				67B481FF231F93D2000C6DFB /* blake2_common.h */,
+				67B48200231F93D3000C6DFB /* blake2b.c */,
+				67B48201231F93D3000C6DFB /* blake2s.c */,
+				67B48203231F93D3000C6DFB /* blake256.c */,
+				67B48204231F93D3000C6DFB /* cash_addr.c */,
+				67B481EF231F93AA000C6DFB /* chacha20poly1305 */,
+				67B481EB231F93A0000C6DFB /* check_mem.h */,
+				67B481EA231F93A0000C6DFB /* curves.c */,
+				67B481EC231F93A0000C6DFB /* ecdsa.c */,
+				67B481CE231F936E000C6DFB /* ed25519-donna */,
+				67B481C5231F9365000C6DFB /* groestl_internal.h */,
+				67B481C7231F9365000C6DFB /* groestl.c */,
+				67B481C6231F9365000C6DFB /* hasher.c */,
+				67B481C9231F9365000C6DFB /* hmac.c */,
+				67B481C8231F9365000C6DFB /* memzero.c */,
+				67B481B4231F9331000C6DFB /* nano.c */,
+				67B481B2231F9331000C6DFB /* nem.c */,
+				67B481B1231F9331000C6DFB /* nist256p1.c */,
+				67B481B0231F9331000C6DFB /* options.h */,
+				67B481AE231F9331000C6DFB /* pbkdf2.c */,
+				67B481AF231F9331000C6DFB /* rand.c */,
+				67B481B3231F9331000C6DFB /* rc4.c */,
+				67B481AB231F9303000C6DFB /* ripple */,
+				67B481A0231F92F6000C6DFB /* schnorr.c */,
+				67B481A4231F92F7000C6DFB /* script.c */,
+				67B481A1231F92F6000C6DFB /* scrypt.c */,
+				67B481A2231F92F6000C6DFB /* secp256k1.c */,
+				67B481A3231F92F7000C6DFB /* sha2.c */,
+				67B4819F231F92F6000C6DFB /* sha3.c */,
+				67B48194231F928A000C6DFB /* sodium */,
+			);
+			name = src;
+			path = JubSDK/deps/ios;
+			sourceTree = "<group>";
+		};
+		67B48194231F928A000C6DFB /* sodium */ = {
+			isa = PBXGroup;
+			children = (
+				67B4819D231F92D8000C6DFB /* keypair.c */,
+				67B48195231F9294000C6DFB /* private */,
+			);
+			name = sodium;
+			sourceTree = "<group>";
+		};
+		67B48195231F9294000C6DFB /* private */ = {
+			isa = PBXGroup;
+			children = (
+				67B4819A231F92C7000C6DFB /* ed25519_ref10_fe_25_5.c */,
+				67B48199231F92C7000C6DFB /* ed25519_ref10.c */,
+				67B48196231F929D000C6DFB /* fe_25_5 */,
+			);
+			name = private;
+			sourceTree = "<group>";
+		};
+		67B48196231F929D000C6DFB /* fe_25_5 */ = {
+			isa = PBXGroup;
+			children = (
+				67B48197231F92B3000C6DFB /* fe.c */,
+			);
+			name = fe_25_5;
+			sourceTree = "<group>";
+		};
+		67B481AB231F9303000C6DFB /* ripple */ = {
+			isa = PBXGroup;
+			children = (
+				67B481AC231F9315000C6DFB /* base58.c */,
+			);
+			name = ripple;
+			sourceTree = "<group>";
+		};
+		67B481CE231F936E000C6DFB /* ed25519-donna */ = {
+			isa = PBXGroup;
+			children = (
+				67B481D7231F9380000C6DFB /* curve25519-donna-32bit.c */,
+				67B481DC231F9380000C6DFB /* curve25519-donna-helpers.c */,
+				67B481DB231F9380000C6DFB /* curve25519-donna-scalarmult-base.c */,
+				67B481D1231F9380000C6DFB /* curve25519-donna-scalarmult-base.h */,
+				67B481D8231F9380000C6DFB /* ed25519-blake2b.c */,
+				67B481D3231F9380000C6DFB /* ed25519-donna-32bit-tables.c */,
+				67B481D5231F9380000C6DFB /* ed25519-donna-basepoint-table.c */,
+				67B481D2231F9380000C6DFB /* ed25519-donna-impl-base.c */,
+				67B481CF231F9380000C6DFB /* ed25519-hash-custom-blake2b.h */,
+				67B481D4231F9380000C6DFB /* ed25519-hash-custom-keccak.h */,
+				67B481DA231F9380000C6DFB /* ed25519-hash-custom-sha3.h */,
+				67B481DE231F9381000C6DFB /* ed25519-hash-custom.h */,
+				67B481D6231F9380000C6DFB /* ed25519-keccak.c */,
+				67B481DD231F9381000C6DFB /* ed25519-sha3.c */,
+				67B481D0231F9380000C6DFB /* ed25519.c */,
+				67B481D9231F9380000C6DFB /* modm-donna-32bit.c */,
+			);
+			name = "ed25519-donna";
+			sourceTree = "<group>";
+		};
+		67B481EF231F93AA000C6DFB /* chacha20poly1305 */ = {
+			isa = PBXGroup;
+			children = (
+				67B481F5231F93BC000C6DFB /* chacha_merged.c */,
+				67B481F7231F93BC000C6DFB /* chacha20poly1305.c */,
+				67B481F3231F93BC000C6DFB /* ecrypt-machine.h */,
+				67B481F6231F93BC000C6DFB /* ecrypt-portable.h */,
+				67B481F4231F93BC000C6DFB /* poly1305-donna-32.h */,
+				67B481F1231F93BC000C6DFB /* poly1305-donna.c */,
+				67B481F2231F93BC000C6DFB /* rfc7539.c */,
+				67B481F0231F93BC000C6DFB /* rfc7539.h */,
+			);
+			name = chacha20poly1305;
+			sourceTree = "<group>";
+		};
+		67B48210231F93DB000C6DFB /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				67B48213231F93ED000C6DFB /* aes_modes.c */,
+				67B48214231F93ED000C6DFB /* aescrypt.c */,
+				67B48216231F93ED000C6DFB /* aeskey.c */,
+				67B48211231F93ED000C6DFB /* aesopt.h */,
+				67B48215231F93ED000C6DFB /* aestab.c */,
+				67B48212231F93ED000C6DFB /* aestab.h */,
+			);
+			name = aes;
 			sourceTree = "<group>";
 		};
 		67B9563122DC704400E90AF9 /* airbitz-core */ = {
@@ -332,6 +791,7 @@
 				67B9563922DC75C800E90AF9 /* mSIGNA */,
 				672452C322E08E4A000CC64D /* panzi */,
 				EADCCDB922A7C25D008F2EF5 /* polarssl */,
+				67B4814C231F8F92000C6DFB /* trezor-crypto */,
 			);
 			name = deps;
 			path = JubSDK/deps;
@@ -490,6 +950,8 @@
 				EADCCE0922A7D6BA008F2EF5 /* context */,
 				EADCCE1322A7D6BA008F2EF5 /* device */,
 				EADCCE0422A7D6BA008F2EF5 /* token */,
+				67B48146231F8D48000C6DFB /* libBTC */,
+				67B48149231F8D66000C6DFB /* libBCH */,
 				EADCCE0F22A7D6BA008F2EF5 /* libETH */,
 				EADCCE1922A7D6BA008F2EF5 /* utility */,
 			);
@@ -600,43 +1062,98 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B4821F231F94C1000C6DFB /* segwit_addr.cpp in Sources */,
+				67B481CD231F9366000C6DFB /* hmac.c in Sources */,
+				67B481B8231F9331000C6DFB /* nem.c in Sources */,
 				67C4B5AC22CEFB6A00F85860 /* BigInteger.cc in Sources */,
+				67B481E6231F9381000C6DFB /* modm-donna-32bit.c in Sources */,
+				67B48218231F93ED000C6DFB /* aescrypt.c in Sources */,
 				EADCCE1C22A7D6BA008F2EF5 /* JubiterBLDImpl.cpp in Sources */,
+				67B481B7231F9331000C6DFB /* nist256p1.c in Sources */,
 				EADCCE2322A7D6BA008F2EF5 /* ERC20Abi.cpp in Sources */,
+				67B481E1231F9381000C6DFB /* ed25519-donna-32bit-tables.c in Sources */,
+				67B481B6231F9331000C6DFB /* rand.c in Sources */,
 				EADCCE2622A7D6BA008F2EF5 /* JubiterBLEDevice.cpp in Sources */,
+				67B481B9231F9331000C6DFB /* rc4.c in Sources */,
 				EADCCDD922A7C25D008F2EF5 /* md.c in Sources */,
+				67B481ED231F93A1000C6DFB /* curves.c in Sources */,
+				67B4821A231F93ED000C6DFB /* aeskey.c in Sources */,
 				EADCCDD022A7C25D008F2EF5 /* md4.c in Sources */,
 				6723139E22D3083F005BEFCC /* base58.cpp in Sources */,
 				EADCCE1E22A7D6BA008F2EF5 /* Context.cpp in Sources */,
+				67B481FB231F93BC000C6DFB /* chacha20poly1305.c in Sources */,
 				EADCCDD422A7C25D008F2EF5 /* md2.c in Sources */,
+				67B481A6231F92F7000C6DFB /* schnorr.c in Sources */,
+				67B4820E231F93D3000C6DFB /* bignum.c in Sources */,
 				EADCCDD322A7C25D008F2EF5 /* ripemd160.c in Sources */,
+				67B481A7231F92F7000C6DFB /* scrypt.c in Sources */,
+				67B481BA231F9331000C6DFB /* nano.c in Sources */,
 				EADCCE2922A7D6BA008F2EF5 /* util.cpp in Sources */,
 				67C4B5AE22CEFB6A00F85860 /* BigIntegerAlgorithms.cc in Sources */,
+				67B48148231F8D5D000C6DFB /* libBTC.cpp in Sources */,
+				67B48217231F93ED000C6DFB /* aes_modes.c in Sources */,
+				67B481E0231F9381000C6DFB /* ed25519-donna-impl-base.c in Sources */,
+				67B4821C231F9400000C6DFB /* address.c in Sources */,
+				67B4820D231F93D3000C6DFB /* cash_addr.c in Sources */,
 				672C960E22DF45300073AB0D /* JUB_SDK_DEV.cpp in Sources */,
+				67B481E3231F9381000C6DFB /* ed25519-keccak.c in Sources */,
+				67B4820C231F93D3000C6DFB /* blake256.c in Sources */,
 				EADCCE2722A7D6BA008F2EF5 /* ApduBuilder.cpp in Sources */,
+				67B481CC231F9366000C6DFB /* memzero.c in Sources */,
+				67B48208231F93D3000C6DFB /* base32.c in Sources */,
 				678C1BF822E03DA700D9A4CD /* JUB_SDK_COMM.cpp in Sources */,
+				67B481E7231F9381000C6DFB /* curve25519-donna-scalarmult-base.c in Sources */,
 				EADCCDD522A7C25D008F2EF5 /* md_wrap.c in Sources */,
+				67B481E2231F9381000C6DFB /* ed25519-donna-basepoint-table.c in Sources */,
 				EADCCDB822A7C21C008F2EF5 /* bleTransmit.cpp in Sources */,
+				67B481CA231F9366000C6DFB /* hasher.c in Sources */,
 				67C4B5AF22CEFB6A00F85860 /* BigIntegerUtils.cc in Sources */,
+				67B4819E231F92D8000C6DFB /* keypair.c in Sources */,
+				67B48207231F93D3000C6DFB /* bip39.c in Sources */,
+				67B481E4231F9381000C6DFB /* curve25519-donna-32bit.c in Sources */,
 				EADCCE2022A7D6BA008F2EF5 /* ContextETH.cpp in Sources */,
 				67C4B5AD22CEFB6A00F85860 /* BigUnsigned.cc in Sources */,
+				67B48209231F93D3000C6DFB /* base58.c in Sources */,
+				67B481DF231F9381000C6DFB /* ed25519.c in Sources */,
+				67B481FA231F93BC000C6DFB /* chacha_merged.c in Sources */,
+				67B481F8231F93BC000C6DFB /* poly1305-donna.c in Sources */,
 				EADCCDD622A7C25D008F2EF5 /* sha256.c in Sources */,
+				67B4819B231F92C7000C6DFB /* ed25519_ref10.c in Sources */,
 				EADCCDD722A7C25D008F2EF5 /* md5.c in Sources */,
+				67B481E8231F9381000C6DFB /* curve25519-donna-helpers.c in Sources */,
 				67C4B5B022CEFB6A00F85860 /* BigUnsignedInABase.cc in Sources */,
 				EADCCE1B22A7D6BA008F2EF5 /* JubiterBLDImplETH.cpp in Sources */,
+				67B481AD231F9315000C6DFB /* base58.c in Sources */,
 				6723139F22D3083F005BEFCC /* bech32.cpp in Sources */,
+				67B481AA231F92F7000C6DFB /* script.c in Sources */,
+				67B4820A231F93D3000C6DFB /* blake2b.c in Sources */,
 				672C961222DF46A70073AB0D /* JUB_SDK_DEV_BLE.cpp in Sources */,
+				67B481EE231F93A1000C6DFB /* ecdsa.c in Sources */,
 				EADCCE1D22A7D6BA008F2EF5 /* JubiterBLDImplBTC.cpp in Sources */,
+				67B481A8231F92F7000C6DFB /* secp256k1.c in Sources */,
+				67B4819C231F92C7000C6DFB /* ed25519_ref10_fe_25_5.c in Sources */,
 				EADCCDD222A7C25D008F2EF5 /* platform.c in Sources */,
+				67B481F9231F93BC000C6DFB /* rfc7539.c in Sources */,
 				EADCCE2822A7D6BA008F2EF5 /* Fido.cpp in Sources */,
+				67B481CB231F9366000C6DFB /* groestl.c in Sources */,
+				67B481B5231F9331000C6DFB /* pbkdf2.c in Sources */,
+				67B4820B231F93D3000C6DFB /* blake2s.c in Sources */,
 				672C95FB22DF40BA0073AB0D /* JUB_SDK_BTC.cpp in Sources */,
+				67B4814B231F8D76000C6DFB /* libBCH.cpp in Sources */,
 				EADCCE2522A7D6BA008F2EF5 /* JubiterHidDevice.cpp in Sources */,
 				EADCCE1F22A7D6BA008F2EF5 /* ContextBTC.cpp in Sources */,
+				67B48219231F93ED000C6DFB /* aestab.c in Sources */,
+				67B481A9231F92F7000C6DFB /* sha2.c in Sources */,
 				672313A322D30A12005BEFCC /* cashaddr.cc in Sources */,
 				672C960422DF430A0073AB0D /* JUB_SDK_ETH.cpp in Sources */,
+				67B481E5231F9381000C6DFB /* ed25519-blake2b.c in Sources */,
+				67B4820F231F93D3000C6DFB /* bip32.c in Sources */,
 				EADCCDD122A7C25D008F2EF5 /* sha1.c in Sources */,
+				67B481A5231F92F7000C6DFB /* sha3.c in Sources */,
 				672C960B22DF44800073AB0D /* JUB_SDK_DEV_HID.cpp in Sources */,
+				67B48198231F92B4000C6DFB /* fe.c in Sources */,
 				67B9563622DC707600E90AF9 /* Data.cpp in Sources */,
+				67B481E9231F9381000C6DFB /* ed25519-sha3.c in Sources */,
 				EADCCDD822A7C25D008F2EF5 /* sha512.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,6 +1284,7 @@
 					../../deps/bleTransmit,
 					../../deps/bleTransmit/ios,
 					../../deps/libbitcoin,
+					"../../deps/trezor-crypto/include",
 					../../deps/,
 				);
 				LIBRARY_SEARCH_PATHS = "";
@@ -791,6 +1309,7 @@
 					../../deps/bleTransmit,
 					../../deps/bleTransmit/ios,
 					../../deps/libbitcoin,
+					"../../deps/trezor-crypto/include",
 					../../deps/,
 				);
 				LIBRARY_SEARCH_PATHS = "";

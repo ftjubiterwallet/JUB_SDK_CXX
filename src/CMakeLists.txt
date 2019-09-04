@@ -6,6 +6,8 @@ aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/ SRC_LIST)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/utility SRC_LIST)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/context SRC_LIST)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/device SRC_LIST)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/libBTC SRC_LIST)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/libBCH SRC_LIST)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/libETH SRC_LIST)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/token SRC_LIST)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/../deps SRC_LIST)
@@ -16,6 +18,7 @@ aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/../deps/polarssl SRC_LIST)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../deps)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../deps/trezor-crypto/include)
 if(IOS)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../deps/bleTransmit/ios)
 elseif(ANDROID)
@@ -28,6 +31,9 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../deps/libbitcoin)
 
 
 ADD_LIBRARY(JUB_SDK STATIC ${SRC_LIST})
+#if(IOS)
+ADD_DEFINITIONS(-DTARGET_OS_IPHONE)
+#endif()
 
 # test endian.h
 find_path(ENDIAN_PATH endian.h)
