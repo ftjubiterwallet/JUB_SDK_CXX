@@ -9,20 +9,21 @@
 #import "JubSDKCore.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
 //typedef enum {
-//    COINBTC,
-//    COINBCH,
-//    COINLTC,
-//    COINUSDT,
-//    Default = COINBTC
+//    COINBTC  = 0x00,
+//    COINBCH  = 0x01,
+//    COINLTC  = 0x02,
+//    COINUSDT = 0x03,
+//    COINDASH = 0x04,
+//    Default  = COINBTC
 //} JUB_ENUM_COINTYPE_BTC;
 typedef NS_ENUM(NSInteger, JUB_NS_ENUM_COINTYPE_BTC) {
-    NS_COINBTC,
-    NS_COINBCH,
-    NS_COINLTC,
-    NS_COINUSDT,
-    NS_Default = NS_COINBTC
+    NS_COINBTC  = 0x00,
+    NS_COINBCH  = 0x01,
+    NS_COINLTC  = 0x02,
+    NS_COINUSDT = 0x03,
+    NS_COINDASH = 0x04,
+    NS_Default  = NS_COINBTC
 };
 
 //typedef enum {

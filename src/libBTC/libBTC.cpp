@@ -22,6 +22,7 @@ JUB_RV buildScriptPubFromAddress(const std::string& address, uchar_vector& scrip
     if (rv) {
         if (   p2shVersion     == vScriptPub[0]
             || p2shVersion_LTC == vScriptPub[0]
+            || p2shVersion_DASH== vScriptPub[0]
             ) { // p2sh
             scriptPub << libbitcoin::machine::opcode::hash160;
             scriptPub & uchar_vector(vScriptPub.begin() + 1, vScriptPub.end());
@@ -29,6 +30,7 @@ JUB_RV buildScriptPubFromAddress(const std::string& address, uchar_vector& scrip
         }
         else if (   p2pkhVersion     == vScriptPub[0]
                  || p2pkhVersion_LTC == vScriptPub[0]
+                 || p2pkhVersion_DASH== vScriptPub[0]
                  ) { //p2pkh
             scriptPub << libbitcoin::machine::opcode::dup;
             scriptPub << libbitcoin::machine::opcode::hash160;

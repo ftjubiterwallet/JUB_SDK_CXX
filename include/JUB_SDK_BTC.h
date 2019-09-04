@@ -16,11 +16,12 @@ extern "C" {
 #endif // #ifdef __cplusplus
 
 typedef enum {
-    COINBTC,
-    COINBCH,
-    COINLTC,
-    COINUSDT,
-    Default = COINBTC
+    COINBTC  = 0x00,
+    COINBCH  = 0x01,
+    COINLTC  = 0x02,
+    COINUSDT = 0x03,
+    COINDASH = 0x04,
+    Default  = COINBTC
 } JUB_ENUM_COINTYPE_BTC;
 
 typedef enum {

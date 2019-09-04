@@ -125,8 +125,9 @@ void main_test() {
         NSLog(@"|  33. BTC_mutilsign_test.      |\n");
         NSLog(@"|  4. BCH_test.                 |\n");
         NSLog(@"|  5. LTC_test.                 |\n");
-        NSLog(@"|  6. USDT_test.                |\n");
-        NSLog(@"|  7. ETH_test & ETC_test.      |\n");
+        NSLog(@"|  6. DASH_test.                |\n");
+        NSLog(@"|  7. USDT_test.                |\n");
+        NSLog(@"|  8. ETH_test & ETC_test.      |\n");
 #endif // #if USE_DEVICE
         NSLog(@"|                               |\n");
 #if TREZOR_CRYPTO
@@ -185,9 +186,11 @@ void main_test() {
                 BTC_test(deviceID, "json/testLTC.json", NS_COINLTC);
                 break;
             case 6:
+                BTC_test(deviceID, "json/testDASH.json", NS_COINDASH);
+            case 7:
                 USDT_test(deviceID, "json/testUSDT.json");
                 break;
-            case 7:
+            case 8:
 //                ETH_test(deviceID, "json/testETH.json");
                 ETH_test(deviceID, "json/testETH_setToken.json");
                 break;
