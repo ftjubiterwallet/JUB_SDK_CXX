@@ -234,9 +234,15 @@ JUB_ETH_PUB_FORMAT (^inlineETHPubFormat)(JUB_NS_ETH_PUB_FORMAT) = ^(JUB_NS_ETH_P
 }
 
 //JUB_RV JUB_BuildERC20AbiETH(IN JUB_UINT16 contextID,
-//                            IN JUB_CHAR_PTR token_to, IN JUB_CHAR_PTR token_value,
+//                            IN JUB_CHAR_PTR tokenName,
+//                            IN JUB_UINT16 unitDP,
+//                            IN JUB_CHAR_PTR contractAddress,
+//                            IN JUB_CHAR_PTR tokenTo, IN JUB_CHAR_PTR tokenValue,
 //                            OUT JUB_CHAR_PTR_PTR abi);
 - (NSString*)JUB_BuildERC20AbiETH:(NSUInteger)contextID
+                        tokenName:(NSString*)tokenName
+                           unitDP:(NSUInteger)unitDP
+                  contractAddress:(NSString*)contractAddress
                           tokenTo:(NSString*)tokenTo
                        tokenValue:(NSString*)tokenValue
 {
@@ -244,6 +250,9 @@ JUB_ETH_PUB_FORMAT (^inlineETHPubFormat)(JUB_NS_ETH_PUB_FORMAT) = ^(JUB_NS_ETH_P
     
     JUB_CHAR_PTR abi = nullptr;
     JUB_RV rv = JUB_BuildERC20AbiETH(contextID,
+                                     (JUB_CHAR_PTR)[tokenName UTF8String],
+                                     unitDP,
+                                     (JUB_CHAR_PTR)[contractAddress UTF8String],
                                      (JUB_CHAR_PTR)[tokenTo UTF8String],
                                      (JUB_CHAR_PTR)[tokenValue UTF8String],
                                      &abi);
@@ -257,21 +266,6 @@ JUB_ETH_PUB_FORMAT (^inlineETHPubFormat)(JUB_NS_ETH_PUB_FORMAT) = ^(JUB_NS_ETH_P
     JUB_FreeMemory(abi);
     
     return strAbi;
-}
-
-//JUB_RV JUB_SetERC20ETHToken(IN JUB_UINT16 contextID,
-//                            IN JUB_CHAR_PTR tokenName,
-//                            IN JUB_UINT16 unitDP,
-//                            IN JUB_CHAR_PTR contractAddress);
-- (void)JUB_SetERC20ETHToken:(NSUInteger)contextID
-                   tokenName:(NSString*)tokenName
-                      unitDP:(NSUInteger)unitDP
-             contractAddress:(NSString*)contractAddress
-{
-    self.lastError = JUB_SetERC20ETHToken(contextID,
-                                          (JUB_CHAR_PTR)[tokenName UTF8String],
-                                          (JUB_UINT16)unitDP,
-                                          (JUB_CHAR_PTR)[contractAddress UTF8String]);
 }
 
 @end

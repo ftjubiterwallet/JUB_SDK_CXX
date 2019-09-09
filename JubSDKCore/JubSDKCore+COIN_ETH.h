@@ -83,20 +83,17 @@ NS_ASSUME_NONNULL_BEGIN
                               input:(NSString*)input;
 
 //JUB_RV JUB_BuildERC20AbiETH(IN JUB_UINT16 contextID,
-//                            IN JUB_CHAR_PTR token_to, IN JUB_CHAR_PTR token_value,
-//                            OUT JUB_CHAR_PTR_PTR abi);
-- (NSString*)JUB_BuildERC20AbiETH:(NSUInteger)contextID
-                          tokenTo:(NSString*)tokenTo
-                       tokenValue:(NSString*)tokenValue;
-
-//JUB_RV JUB_SetERC20ETHToken(IN JUB_UINT16 contextID,
 //                            IN JUB_CHAR_PTR tokenName,
 //                            IN JUB_UINT16 unitDP,
-//                            IN JUB_CHAR_PTR contractAddress);
-- (void)JUB_SetERC20ETHToken:(NSUInteger)contextID
-                   tokenName:(NSString*)tokenName
-                      unitDP:(NSUInteger)unitDP
-             contractAddress:(NSString*)contractAddress;
+//                            IN JUB_CHAR_PTR contractAddress,
+//                            IN JUB_CHAR_PTR tokenTo, IN JUB_CHAR_PTR tokenValue,
+//                            OUT JUB_CHAR_PTR_PTR abi);
+- (NSString*)JUB_BuildERC20AbiETH:(NSUInteger)contextID
+                        tokenName:(NSString*)tokenName
+                           unitDP:(NSUInteger)unitDP
+                  contractAddress:(NSString*)contractAddress
+                          tokenTo:(NSString*)tokenTo
+                       tokenValue:(NSString*)tokenValue;
 
 @end
 

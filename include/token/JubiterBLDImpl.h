@@ -63,6 +63,7 @@ public:
     //ETH functions
 
     virtual JUB_RV SelectAppletETH();
+    virtual JUB_RV GetAppletVersionETH(std::string& version);
     virtual JUB_RV GetAddressETH(const std::string& path, const JUB_UINT16 tag, std::string& address);
     virtual JUB_RV GetHDNodeETH(const JUB_BYTE format, const std::string& path, std::string& pubkey);
     virtual JUB_RV SignTXETH(const bool bERC20,

@@ -16,6 +16,14 @@ JUB_RV JubiterBLDImpl::SelectAppletETH() {
     return JUBR_OK;
 }
 
+JUB_RV JubiterBLDImpl::GetAppletVersionETH(std::string &version) {
+
+    uchar_vector appID(kPKIAID_ETH, 16);
+    JUB_VERIFY_RV(GetAppletVersion(CharPtr2HexStr(appID), version));
+
+    return JUBR_OK;
+}
+
 JUB_RV JubiterBLDImpl::GetAddressETH(const std::string& path, const JUB_UINT16 tag, std::string& address) {
 
     uchar_vector data(path.begin(), path.end());

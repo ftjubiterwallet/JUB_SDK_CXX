@@ -188,8 +188,7 @@ void main_test() {
                 USDT_test(deviceID, "json/testUSDT.json");
                 break;
             case 7:
-//                ETH_test(deviceID, "json/testETH.json");
-                ETH_test(deviceID, "json/testETH_setToken.json");
+                ETH_test(deviceID, "json/testETH.json");
                 break;
 #endif // #if USE_DEVICE
 #if TREZOR_CRYPTO

@@ -31,7 +31,6 @@ void  get_address_pubkey_ETH(NSUInteger contextID);
 void    transaction_test_ETH(NSUInteger contextID, Json::Value root);
 void   transaction_ERC20_ETH(NSUInteger contextID, Json::Value root);
 void set_my_address_test_ETH(NSUInteger contextID);
-//void set_ERC20_token_test(NSUInteger contextID, Json::Value root);
 
 void ETH_test(NSUInteger deviceID, const char* json_file) {
     NSUInteger lastError = JUBR_ERROR;
@@ -70,7 +69,6 @@ void ETH_test(NSUInteger deviceID, const char* json_file) {
         NSLog(@"| 3. transaction_ERC20_test.       |\n");
         NSLog(@"| 4. set_my_address_test.          |\n");
         NSLog(@"| 5. set_timeout_test.             |\n");
-        NSLog(@"| 6. set_ERC20_token_test.         |\n");
         NSLog(@"|                                  |\n");
         NSLog(@"| 9. return.                       |\n");
         NSLog(@"|----------------------------------|\n");
@@ -93,9 +91,6 @@ void ETH_test(NSUInteger deviceID, const char* json_file) {
                 break;
             case 5:
                 set_timeout_test(contextID);
-                break;
-//            case 6:
-//                set_ERC20_token_test(contextID, root);
                 break;
             case 9:
                 main_test();
@@ -216,9 +211,15 @@ void transaction_ERC20_ETH(NSUInteger contextID, Json::Value root) {
         return;
     }
     
+    NSString* tokenName = [NSString stringWithUTF8String:(char*)root["ERC20"]["tokenName"].asCString()];
+    NSUInteger dp = root["ERC20"]["dp"].asUInt();
+    NSString* contractAddress = [NSString stringWithUTF8String:(char*)root["ERC20"]["contract_address"].asCString()];
     NSString* tokenTo = [NSString stringWithUTF8String:(char*)root["ERC20"]["token_to"].asCString()];
     NSString* tokenValue = [NSString stringWithUTF8String:(char*)root["ERC20"]["token_value"].asCString()];
     NSString* abi = [g_sdk JUB_BuildERC20AbiETH:contextID
+                                      tokenName:tokenName
+                                         unitDP:dp
+                                contractAddress:contractAddress
                                         tokenTo:tokenTo
                                      tokenValue:tokenValue];
     lastError = (long)[g_sdk JUB_LastError];
@@ -240,13 +241,12 @@ void transaction_ERC20_ETH(NSUInteger contextID, Json::Value root) {
     NSUInteger nonce = root["ERC20"]["nonce"].asUInt();//.asDouble();
     NSUInteger gasLimit = root["ERC20"]["gasLimit"].asUInt();//.asDouble();
     NSString* gasPriceInWei = [NSString stringWithUTF8String:(char*)root["ERC20"]["gasPriceInWei"].asCString()];
-    NSString* to = [NSString stringWithUTF8String:(char*)root["ERC20"]["contract_address"].asCString()];
     NSString* raw = [g_sdk JUB_SignTransactionETH:contextID
                                              path:path
                                             nonce:nonce
                                          gasLimit:gasLimit
                                     gasPriceInWei:gasPriceInWei
-                                               to:to
+                                               to:contractAddress
                                        valueInWei:@""
                                             input:abi];
     lastError = (long)[g_sdk JUB_LastError];
@@ -285,18 +285,3 @@ void set_my_address_test_ETH(NSUInteger contextID) {
     }
     NSLog(@"set my address is: %@\n", address);
 }
-//
-//void set_ERC20_token_test(NSUInteger contextID, Json::Value root) {
-//    NSUInteger lastError = JUBR_ERROR;
-//
-//    NSString* tokenName = [NSString stringWithUTF8String:(char*)root["ERC20Token"]["tokenName"].asCString()];
-//    NSUInteger dp = root["ERC20Token"]["dp"].asUInt();
-//    NSString* contractAddress = [NSString stringWithUTF8String:(char*)root["ERC20Token"]["contract_address"].asCString()];
-//
-//    [g_sdk JUB_SetERC20ETHToken:contextID
-//                      tokenName:tokenName
-//                         unitDP:dp
-//                contractAddress:contractAddress];
-//    lastError = (long)[g_sdk JUB_LastError];
-//    NSLog(@"[%li] JUB_SetERC20ETHToken(%li)\n", lastError, contextID);
-//}

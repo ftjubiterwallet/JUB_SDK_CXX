@@ -32,6 +32,7 @@ public:
         _chainID = cfg.chainID;
         _deviceID = deviceID;
         _timeout = 120 * 2;
+        _appletVersion = "";
     };
     ~ContextETH() {};
 

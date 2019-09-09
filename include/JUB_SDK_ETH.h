@@ -120,30 +120,21 @@ JUB_RV JUB_SignTransactionETH(IN JUB_UINT16 contextID,
 /*****************************************************************************
  * @function name : JUB_BuildERC20AbiETH
  * @in  param : contextID - context ID
- *            : token_to
- *            : token_value
+ *            : tokenName - ETH token name
+ *            : unitDP - unit decimal place
+ *            : contractAddress - contract address
+ *            : tokenTo - token to
+ *            : tokenValue - value for token transaction
  * @out param : abi
  * @last change :
  *****************************************************************************/
 JUB_COINCORE_DLL_EXPORT
 JUB_RV JUB_BuildERC20AbiETH(IN JUB_UINT16 contextID,
-                            IN JUB_CHAR_PTR tokenTo, IN JUB_CHAR_PTR tokenValue,
-                            OUT JUB_CHAR_PTR_PTR abi);
-
-/*****************************************************************************
- * @function name : JUB_SetERC20ETHToken
- * @in  param : contextID - context ID
- *            : tokenName - ETH token name
- *            : unitDP - unit decimal place
- *            : contractAddress - contract address
- * @out param : none
- * @last change :
- *****************************************************************************/
-JUB_COINCORE_DLL_EXPORT
-JUB_RV JUB_SetERC20ETHToken(IN JUB_UINT16 contextID,
                             IN JUB_CHAR_PTR tokenName,
                             IN JUB_UINT16 unitDP,
-                            IN JUB_CHAR_PTR contractAddress);
+                            IN JUB_CHAR_PTR contractAddress,
+                            IN JUB_CHAR_PTR tokenTo, IN JUB_CHAR_PTR tokenValue,
+                            OUT JUB_CHAR_PTR_PTR abi);
 #ifdef __cplusplus
 }
 #endif // #ifdef __cplusplus
