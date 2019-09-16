@@ -132,6 +132,7 @@ JUB_RV ContextBTC::SignTX(const std::vector<INPUT_BTC>& vInputs, const std::vect
     if (   COINBTC  == _coinType
         || COINLTC  == _coinType
         || COINUSDT == _coinType
+        || COINDASH == _coinType
         ) { //BTC&LTC
         ret = jub::btc::serializeUnsignedTx(_transType, vInputs, vOutputs, lockTime, unsignedTrans);
     }

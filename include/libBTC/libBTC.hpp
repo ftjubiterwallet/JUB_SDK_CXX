@@ -23,6 +23,9 @@ constexpr JUB_BYTE p2pkhVersion = 0x00;
 constexpr JUB_BYTE  p2shVersion_LTC = 0x32;
 constexpr JUB_BYTE p2pkhVersion_LTC = 0x30;
 
+constexpr JUB_BYTE  p2shVersion_DASH = 0x10;
+constexpr JUB_BYTE p2pkhVersion_DASH = 0x4c;
+
 constexpr char segwit_hrl[] = "bc";
 
 JUB_RV buildScriptPubFromAddress(const std::string& address, uchar_vector& scriptPub);

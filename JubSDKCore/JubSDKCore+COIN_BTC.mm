@@ -102,6 +102,9 @@ JUB_ENUM_COINTYPE_BTC (^inlineCoinType)(JUB_NS_ENUM_COINTYPE_BTC) = ^(JUB_NS_ENU
         case NS_COINUSDT:
             coinType = COINUSDT;
             break;
+        case NS_COINDASH:
+            coinType = COINDASH;
+            break;
         default:
             coinType = Default;
             break;

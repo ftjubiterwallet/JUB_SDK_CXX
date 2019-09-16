@@ -14,6 +14,7 @@ JUB_SDK_CXX lets you use JuBiter cryptocurrency hardware wallet easily. It provi
   - BCH
   - LTC
   - USDT
+  - DASH
   - ETH
   - ERC20-token
 

@@ -18,19 +18,19 @@
 		6732D3D822C2149E00FB9A5A /* DevicePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D3D022C2149E00FB9A5A /* DevicePool.m */; };
 		6732D3DD22C214AF00FB9A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6732D3D922C214AF00FB9A5A /* LaunchScreen.storyboard */; };
 		6732D3DE22C214AF00FB9A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6732D3DB22C214AF00FB9A5A /* Main.storyboard */; };
+		67B48223231F9889000C6DFB /* JubSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6732D36622C0CC3B00FB9A5A /* JubSDK.framework */; };
+		67B48224231F9889000C6DFB /* JubSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6732D36622C0CC3B00FB9A5A /* JubSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67E6A69422C321A4009FA2CE /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E6A69322C321A4009FA2CE /* Object.m */; };
-		67E6A6A322C356D3009FA2CE /* JubSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6732D36622C0CC3B00FB9A5A /* JubSDK.framework */; };
-		67E6A6A422C356D3009FA2CE /* JubSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6732D36622C0CC3B00FB9A5A /* JubSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		67E6A6A522C356D4009FA2CE /* Embed Frameworks */ = {
+		67B48225231F988A000C6DFB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				67E6A6A422C356D3009FA2CE /* JubSDK.framework in Embed Frameworks */,
+				67B48224231F9889000C6DFB /* JubSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,8 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67E6A6A322C356D3009FA2CE /* JubSDK.framework in Frameworks */,
 				6732D37022C1C4A800FB9A5A /* CoreBluetooth.framework in Frameworks */,
+				67B48223231F9889000C6DFB /* JubSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 				674E804F22BDFB68009332EB /* Sources */,
 				674E805022BDFB68009332EB /* Frameworks */,
 				674E805122BDFB68009332EB /* Resources */,
-				67E6A6A522C356D4009FA2CE /* Embed Frameworks */,
+				67B48225231F988A000C6DFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
