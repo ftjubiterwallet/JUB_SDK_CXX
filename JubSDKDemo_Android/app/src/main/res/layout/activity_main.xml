@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jubiter.test.jubsdktest.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_scan"
+            style="@style/button"
+            android:onClick="onClick"
+            android:text="连接" />
+
+        <TextView
+            android:id="@+id/text_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="11dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+        <EditText
+            android:id="@+id/edit_apdu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:text="00D6FEED01"
+            android:layout_marginRight="13dp"/>
+
+        <Button
+            android:id="@+id/btn_send_apdu"
+            style="@style/button"
+            android:onClick="onClick"
+            android:text="send apdu" />
+
+        <Button
+            android:id="@+id/btn_get_device_info"
+            style="@style/button"
+            android:onClick="onClick"
+            android:text="get_device_info_test"/>
+
+        <Button
+            android:id="@+id/btn_test_getAddress"
+            style="@style/button"
+            android:onClick="onClick"
+            android:text="get_address_test"/>
+
+        <Button
+            android:id="@+id/btn_test_trans"
+            style="@style/button"
+            android:onClick="onClick"
+            android:text="transaction test" />
+
+        <TextView
+            android:id="@+id/info_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="13dp"/>
+    </LinearLayout>
+
+</ScrollView>
